@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刘彦 · 视觉创作者 / AI 短剧导演 — 个人作品集</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' fill='%23F4F1EA' stroke='%23A63A2E' stroke-width='3'/%3E%3Ctext x='32' y='44' font-size='32' text-anchor='middle' fill='%23A63A2E' font-family='serif'%3E刘%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F1EA;
+  --paper-2:#EAE5DA;
+  --ink:#2B2823;
+  --ink-2:#6B655A;
+  --cinnabar:#A63A2E;
+  --cinnabar-deep:#7E2A20;
+  --line:#C9C2B4;
+  --white:#FBF9F4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC","SimSun",serif;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:radial-gradient(rgba(43,40,35,.035) 1px,transparent 1px);
+  background-size:22px 22px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+
+/* ===== 顶部导航 ===== */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(244,241,234,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.seal{
+  width:38px;height:38px;border:1.5px solid var(--cinnabar);color:var(--cinnabar);
+  display:flex;align-items:center;justify-content:center;
+  font-size:21px;font-weight:900;letter-spacing:-2px;border-radius:3px;
+  font-family:"Noto Serif SC",serif;
+}
+.brand-name{font-size:16px;font-weight:700;letter-spacing:2px}
+.brand-sub{font-size:11px;color:var(--ink-2);letter-spacing:1px;margin-top:-2px}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:var(--ink-2);text-decoration:none;font-size:13.5px;letter-spacing:1.5px;transition:color .25s;position:relative}
+.nav-links a:hover{color:var(--cinnabar)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--cinnabar);transition:width .3s}
+.nav-links a:hover::after{width:100%}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:var(--ink);margin:5px 0}
+
+/* ===== Hero ===== */
+header.hero{padding:190px 0 90px;position:relative}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-text h1{
+  font-size:clamp(40px,5.5vw,66px);
+  font-weight:900;letter-spacing:4px;line-height:1.2;
+}
+.hero-text h1 em{font-style:normal;color:var(--cinnabar)}
+.hero-sub{
+  margin-top:18px;font-size:16px;color:var(--ink-2);letter-spacing:3px;
+  display:flex;align-items:center;gap:14px;
+}
+.hero-sub::before{content:"";width:34px;height:1px;background:var(--cinnabar)}
+.hero-desc{margin-top:26px;color:var(--ink-2);font-size:14.5px;max-width:460px;letter-spacing:.5px}
+.hero-tags{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+.hero-tags span{
+  font-size:12px;color:var(--cinnabar);border:1px solid var(--cinnabar);
+  padding:4px 14px;border-radius:2px;letter-spacing:1px;background:rgba(166,58,46,.04);
+}
+.hero-visual{position:relative}
+.hero-frame{
+  border:1px solid var(--line);padding:10px;background:var(--white);
+  box-shadow:0 18px 50px rgba(43,40,35,.12);
+}
+.hero-frame img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover}
+.hero-caption{position:absolute;bottom:-14px;right:18px;background:var(--paper);padding:4px 14px;font-size:12px;color:var(--ink-2);border:1px solid var(--line);letter-spacing:1px}
+.scroll-hint{position:absolute;bottom:-62px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--ink-2);letter-spacing:3px;text-align:center}
+.scroll-hint::after{content:"↓";display:block;margin-top:4px;color:var(--cinnabar)}
+
+/* ===== 板块通用 ===== */
+section{padding:90px 0}
+.sec-head{margin-bottom:46px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.sec-num{font-size:13px;color:var(--cinnabar);letter-spacing:4px;font-weight:700}
+.sec-title{font-size:clamp(26px,3.4vw,38px);font-weight:900;letter-spacing:3px;margin-top:6px}
+.sec-title small{font-size:14px;color:var(--ink-2);font-weight:400;letter-spacing:2px;margin-left:14px}
+.sec-line{flex:1;height:1px;background:var(--line);max-width:320px}
+.sec-desc{color:var(--ink-2);font-size:14px;max-width:520px;margin-top:10px}
+
+/* ===== 画集/漫画 ===== */
+.book-intro{
+  display:grid;grid-template-columns:1fr 1.5fr;gap:46px;align-items:center;margin-bottom:52px;
+  border:1px solid var(--line);background:var(--white);padding:34px;
+}
+.book-cover{position:relative}
+.book-cover img{width:100%;display:block;border:1px solid var(--line);aspect-ratio:3/4;object-fit:cover}
+.book-cover-tag{position:absolute;top:-10px;left:16px;background:var(--cinnabar);color:var(--white);font-size:11px;padding:2px 12px;letter-spacing:2px}
+.book-info h3{font-size:24px;font-weight:900;letter-spacing:2px}
+.book-info .pen{color:var(--cinnabar);font-size:13px;letter-spacing:1px;margin-top:4px}
+.book-info p{color:var(--ink-2);font-size:13.5px;margin-top:12px}
+.book-meta{display:flex;gap:22px;margin-top:18px;font-size:12.5px;color:var(--ink)}
+.book-meta b{color:var(--cinnabar);font-size:18px;font-weight:900;margin-right:4px}
+.gallery{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:14px;
+}
+.g-item{
+  border:1px solid var(--line);background:var(--white);padding:6px;cursor:pointer;
+  transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden;
+}
+.g-item:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(43,40,35,.14);border-color:var(--cinnabar)}
+.g-item img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;transition:opacity .3s}
+.g-item .g-no{position:absolute;bottom:10px;right:10px;background:rgba(244,241,234,.9);font-size:10.5px;color:var(--ink-2);padding:1px 8px;border:1px solid var(--line);letter-spacing:1px}
+.jg-item img{aspect-ratio:auto}
+.more-hint{text-align:center;margin-top:26px;font-size:12px;color:var(--ink-2);letter-spacing:2px}
+.more-hint b{color:var(--cinnabar)}
+
+/* ===== AI 视频 ===== */
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.v-card{
+  border:1px solid var(--line);background:var(--white);cursor:pointer;
+  transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden;
+}
+.v-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(43,40,35,.14)}
+.v-thumb{position:relative;aspect-ratio:9/16;overflow:hidden;background:#1a1814}
+.v-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.v-card:hover .v-thumb img{transform:scale(1.05)}
+.v-play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  background:rgba(20,18,14,.28);transition:background .3s;
+}
+.v-play::before{
+  content:"";width:54px;height:54px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;
+  background:rgba(166,58,46,.55);transition:transform .3s;
+}
+.v-play::after{
+  content:"";position:absolute;width:0;height:0;margin-left:4px;
+  border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:11px solid #fff;
+}
+.v-card:hover .v-play{background:rgba(20,18,14,.1)}
+.v-card:hover .v-play::before{transform:scale(1.12)}
+.v-info{padding:14px 16px;border-top:1px solid var(--line)}
+.v-title{font-size:15px;font-weight:700;letter-spacing:1px}
+.v-sub{font-size:11.5px;color:var(--ink-2);margin-top:4px;letter-spacing:.5px;display:flex;justify-content:space-between}
+.v-tag{display:inline-block;font-size:10.5px;color:var(--cinnabar);border:1px solid var(--cinnabar);padding:0 8px;border-radius:2px;margin-top:8px;letter-spacing:1px}
+
+/* 视频灯箱 */
+.lightbox{
+  position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
+  background:rgba(20,18,14,.9);padding:40px;
+}
+.lightbox.open{display:flex}
+.lb-inner{max-width:420px;width:100%;position:relative}
+.lb-inner video{width:100%;display:block;border:1px solid rgba(255,255,255,.18);background:#000}
+.lb-close{
+  position:absolute;top:-44px;right:0;color:rgba(255,255,255,.9);background:none;border:1px solid rgba(255,255,255,.4);
+  width:34px;height:34px;font-size:16px;cursor:pointer;border-radius:2px;font-family:"Noto Serif SC",serif;line-height:1;
+}
+.lb-title{color:rgba(255,255,255,.92);font-size:14px;letter-spacing:1px;margin-top:12px;text-align:center}
+.lb-hint{color:rgba(255,255,255,.45);font-size:11.5px;text-align:center;margin-top:4px;letter-spacing:1px}
+
+/* ===== 剧本 ===== */
+.script-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.s-card{
+  border:1px solid var(--line);background:var(--white);padding:22px 24px;
+  display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s;
+}
+.s-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(43,40,35,.12);border-color:var(--cinnabar)}
+.s-no{font-size:11px;color:var(--cinnabar);letter-spacing:3px;margin-bottom:8px}
+.s-title{font-size:17px;font-weight:900;letter-spacing:1px}
+.s-type{font-size:11px;color:var(--ink-2);margin-top:5px;letter-spacing:1px}
+.s-desc{font-size:12.5px;color:var(--ink-2);margin-top:12px;flex:1;line-height:1.75}
+.s-foot{margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;align-items:center}
+.s-dl{font-size:12px;color:var(--cinnabar);text-decoration:none;border:1px solid var(--cinnabar);padding:3px 12px;border-radius:2px;letter-spacing:1px;transition:background .25s,color .25s}
+.s-dl:hover{background:var(--cinnabar);color:var(--white)}
+.s-role{font-size:11px;color:var(--ink-2);letter-spacing:.5px}
+
+/* ===== 角色资产 ===== */
+.asset-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.a-item{border:1px solid var(--line);background:var(--white);padding:6px;position:relative;overflow:hidden}
+.a-item img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;transition:transform .5s}
+.a-item:hover img{transform:scale(1.04)}
+.a-cap{position:absolute;left:0;right:0;bottom:0;background:rgba(244,241,234,.92);font-size:11.5px;letter-spacing:1px;padding:5px 10px;border-top:1px solid var(--line);color:var(--ink)}
+
+/* ===== 技艺 ===== */
+.craft-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
+.craft{border-right:1px solid var(--line);padding:30px 26px;background:var(--white);transition:background .3s}
+.craft:last-child{border-right:none}
+.craft:hover{background:var(--paper-2)}
+.craft-num{font-size:11px;color:var(--cinnabar);letter-spacing:3px}
+.craft h3{font-size:18px;font-weight:900;margin-top:8px;letter-spacing:2px}
+.craft ul{list-style:none;margin-top:14px}
+.craft li{font-size:12.5px;color:var(--ink-2);padding:5px 0;padding-left:14px;position:relative;letter-spacing:.5px}
+.craft li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border:1px solid var(--cinnabar);transform:rotate(45deg)}
+
+/* ===== 经历 ===== */
+.timeline{border-left:1px solid var(--line);margin-left:8px;padding-left:36px;display:flex;flex-direction:column;gap:34px}
+.tl-item{position:relative}
+.tl-item::before{
+  content:"";position:absolute;left:-41.5px;top:7px;width:11px;height:11px;
+  background:var(--paper);border:2px solid var(--cinnabar);transform:rotate(45deg);
+}
+.tl-year{font-size:12px;color:var(--cinnabar);letter-spacing:3px;font-weight:700}
+.tl-title{font-size:17px;font-weight:900;margin-top:4px;letter-spacing:1px}
+.tl-desc{font-size:13px;color:var(--ink-2);margin-top:6px;max-width:640px}
+.tl-desc b{color:var(--ink)}
+
+/* ===== 联系 ===== */
+.contact{border:1px solid var(--line);background:var(--white);padding:60px 40px;text-align:center}
+.contact .seal{margin:0 auto 22px;width:56px;height:56px;font-size:30px}
+.contact h3{font-size:28px;font-weight:900;letter-spacing:4px}
+.contact .c-sub{color:var(--ink-2);font-size:13.5px;letter-spacing:2px;margin-top:10px}
+.contact-lines{margin-top:30px;display:flex;justify-content:center;gap:44px;flex-wrap:wrap}
+.c-line{font-size:14px;letter-spacing:1px}
+.c-line b{color:var(--cinnabar);font-weight:700;margin-right:8px}
+.c-line a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .3s}
+.c-line a:hover{border-color:var(--cinnabar)}
+.contact .ready{margin-top:26px;font-size:12.5px;color:var(--cinnabar);letter-spacing:2px;border-top:1px dashed var(--line);padding-top:22px;display:inline-block}
+
+/* ===== Footer ===== */
+footer{border-top:1px solid var(--line);padding:30px 0 40px;text-align:center}
+footer .f-seal{width:30px;height:30px;font-size:16px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;border:1px solid var(--cinnabar);color:var(--cinnabar);border-radius:2px}
+footer p{font-size:11.5px;color:var(--ink-2);letter-spacing:2px}
+footer p b{color:var(--ink)}
+
+/* ===== 响应式 ===== */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  header.hero{padding:150px 0 70px}
+  .video-grid,.script-grid{grid-template-columns:repeat(2,1fr)}
+  .asset-grid{grid-template-columns:repeat(2,1fr)}
+  .craft-grid{grid-template-columns:repeat(2,1fr)}
+  .craft{border-bottom:1px solid var(--line)}
+  .craft:nth-child(2){border-right:none}
+  .craft:nth-child(3),.craft:nth-child(4){border-bottom:none}
+  .book-intro{grid-template-columns:1fr}
+  .sec-head{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .nav-toggle{display:block}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:18px 28px;gap:14px}
+  .video-grid,.script-grid{grid-template-columns:1fr}
+  .asset-grid{grid-template-columns:repeat(2,1fr)}
+  .craft-grid{grid-template-columns:1fr}
+  .craft{border-right:none;border-bottom:1px solid var(--line)}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .wrap{padding:0 18px}
+  section{padding:64px 0}
+  .contact{padding:40px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="seal">刘</span>
+      <span><span class="brand-name">刘彦</span><br><span class="brand-sub">VISUAL CREATOR</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#huaji">插画集</a></li>
+      <li><a href="#manhua">漫画</a></li>
+      <li><a href="#video">AI 短剧</a></li>
+      <li><a href="#script">剧本</a></li>
+      <li><a href="#asset">角色资产</a></li>
+      <li><a href="#craft">技艺</a></li>
+      <li><a href="#jingli">经历</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="top"></div>
+
+<!-- ===== Hero ===== -->
+<header class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <h1>刘彦<em>·</em><br>视觉创作者<br>AI 短剧导演</h1>
+      <div class="hero-sub">ART · ILLUSTRATION · AI DRAMA</div>
+      <p class="hero-desc">美术学出身，从手绘插画与漫画走向 AI 短剧全流程创作——角色设计、剧本、分镜、生成到成片，一个人就是一条完整的视觉生产线。</p>
+      <div class="hero-tags">
+        <span>插画 · 漫画</span>
+        <span>AI 视频生成</span>
+        <span>短剧剧本</span>
+        <span>角色 / 场景资产</span>
+        <span>电商视觉</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-frame">
+        <img src="assets/works/xf_01.jpg" alt="《相逢之时》封面">
+      </div>
+      <div class="hero-caption">《相逢之时》插画集 · 第 01 页</div>
+      <div class="scroll-hint">SCROLL</div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 插画集 ===== -->
+<section id="huaji">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">WORKS 壹</div>
+        <h2 class="sec-title">插画集《相逢之时》<small>FIRST ILLUSTRATION ALBUM</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="book-intro">
+      <div class="book-cover">
+        <span class="book-cover-tag">第一本插画集</span>
+        <img src="assets/works/xf_01.jpg" alt="《相逢之时》封面">
+      </div>
+      <div class="book-info">
+        <h3>相逢之时</h3>
+        <div class="pen">绘者：牧野燃灯</div>
+        <p>我的第一本插画集。以「相逢」为题，收录 32 页创作——关于相遇、离别与重逢的光影练习，用笔触留住那些恰好发生的瞬间。</p>
+        <div class="book-meta">
+          <span><b>32</b>页</span>
+          <span><b>1</b>部</span>
+          <span><b>2025</b>年</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery" id="xfGallery">
+<div class="g-item" data-i="1" data-src="assets/works/xf_01.jpg" data-t="《相逢之时》 · 第 1 页"><img src="assets/works/xf_01.jpg" alt="《相逢之时》第1页" loading="lazy"><span class="g-no">01</span></div>
+<div class="g-item" data-i="2" data-src="assets/works/xf_02.jpg" data-t="《相逢之时》 · 第 2 页"><img src="assets/works/xf_02.jpg" alt="《相逢之时》第2页" loading="lazy"><span class="g-no">02</span></div>
+<div class="g-item" data-i="3" data-src="assets/works/xf_03.jpg" data-t="《相逢之时》 · 第 3 页"><img src="assets/works/xf_03.jpg" alt="《相逢之时》第3页" loading="lazy"><span class="g-no">03</span></div>
+<div class="g-item" data-i="4" data-src="assets/works/xf_04.jpg" data-t="《相逢之时》 · 第 4 页"><img src="assets/works/xf_04.jpg" alt="《相逢之时》第4页" loading="lazy"><span class="g-no">04</span></div>
+<div class="g-item" data-i="5" data-src="assets/works/xf_05.jpg" data-t="《相逢之时》 · 第 5 页"><img src="assets/works/xf_05.jpg" alt="《相逢之时》第5页" loading="lazy"><span class="g-no">05</span></div>
+<div class="g-item" data-i="6" data-src="assets/works/xf_06.jpg" data-t="《相逢之时》 · 第 6 页"><img src="assets/works/xf_06.jpg" alt="《相逢之时》第6页" loading="lazy"><span class="g-no">06</span></div>
+<div class="g-item" data-i="7" data-src="assets/works/xf_07.jpg" data-t="《相逢之时》 · 第 7 页"><img src="assets/works/xf_07.jpg" alt="《相逢之时》第7页" loading="lazy"><span class="g-no">07</span></div>
+<div class="g-item" data-i="8" data-src="assets/works/xf_08.jpg" data-t="《相逢之时》 · 第 8 页"><img src="assets/works/xf_08.jpg" alt="《相逢之时》第8页" loading="lazy"><span class="g-no">08</span></div>
+<div class="g-item" data-i="9" data-src="assets/works/xf_09.jpg" data-t="《相逢之时》 · 第 9 页"><img src="assets/works/xf_09.jpg" alt="《相逢之时》第9页" loading="lazy"><span class="g-no">09</span></div>
+<div class="g-item" data-i="10" data-src="assets/works/xf_10.jpg" data-t="《相逢之时》 · 第 10 页"><img src="assets/works/xf_10.jpg" alt="《相逢之时》第10页" loading="lazy"><span class="g-no">10</span></div>
+<div class="g-item" data-i="11" data-src="assets/works/xf_11.jpg" data-t="《相逢之时》 · 第 11 页"><img src="assets/works/xf_11.jpg" alt="《相逢之时》第11页" loading="lazy"><span class="g-no">11</span></div>
+<div class="g-item" data-i="12" data-src="assets/works/xf_12.jpg" data-t="《相逢之时》 · 第 12 页"><img src="assets/works/xf_12.jpg" alt="《相逢之时》第12页" loading="lazy"><span class="g-no">12</span></div>
+<div class="g-item" data-i="13" data-src="assets/works/xf_13.jpg" data-t="《相逢之时》 · 第 13 页"><img src="assets/works/xf_13.jpg" alt="《相逢之时》第13页" loading="lazy"><span class="g-no">13</span></div>
+<div class="g-item" data-i="14" data-src="assets/works/xf_14.jpg" data-t="《相逢之时》 · 第 14 页"><img src="assets/works/xf_14.jpg" alt="《相逢之时》第14页" loading="lazy"><span class="g-no">14</span></div>
+<div class="g-item" data-i="15" data-src="assets/works/xf_15.jpg" data-t="《相逢之时》 · 第 15 页"><img src="assets/works/xf_15.jpg" alt="《相逢之时》第15页" loading="lazy"><span class="g-no">15</span></div>
+<div class="g-item" data-i="16" data-src="assets/works/xf_16.jpg" data-t="《相逢之时》 · 第 16 页"><img src="assets/works/xf_16.jpg" alt="《相逢之时》第16页" loading="lazy"><span class="g-no">16</span></div>
+<div class="g-item" data-i="17" data-src="assets/works/xf_17.jpg" data-t="《相逢之时》 · 第 17 页"><img src="assets/works/xf_17.jpg" alt="《相逢之时》第17页" loading="lazy"><span class="g-no">17</span></div>
+<div class="g-item" data-i="18" data-src="assets/works/xf_18.jpg" data-t="《相逢之时》 · 第 18 页"><img src="assets/works/xf_18.jpg" alt="《相逢之时》第18页" loading="lazy"><span class="g-no">18</span></div>
+<div class="g-item" data-i="19" data-src="assets/works/xf_19.jpg" data-t="《相逢之时》 · 第 19 页"><img src="assets/works/xf_19.jpg" alt="《相逢之时》第19页" loading="lazy"><span class="g-no">19</span></div>
+<div class="g-item" data-i="20" data-src="assets/works/xf_20.jpg" data-t="《相逢之时》 · 第 20 页"><img src="assets/works/xf_20.jpg" alt="《相逢之时》第20页" loading="lazy"><span class="g-no">20</span></div>
+<div class="g-item" data-i="21" data-src="assets/works/xf_21.jpg" data-t="《相逢之时》 · 第 21 页"><img src="assets/works/xf_21.jpg" alt="《相逢之时》第21页" loading="lazy"><span class="g-no">21</span></div>
+<div class="g-item" data-i="22" data-src="assets/works/xf_22.jpg" data-t="《相逢之时》 · 第 22 页"><img src="assets/works/xf_22.jpg" alt="《相逢之时》第22页" loading="lazy"><span class="g-no">22</span></div>
+<div class="g-item" data-i="23" data-src="assets/works/xf_23.jpg" data-t="《相逢之时》 · 第 23 页"><img src="assets/works/xf_23.jpg" alt="《相逢之时》第23页" loading="lazy"><span class="g-no">23</span></div>
+<div class="g-item" data-i="24" data-src="assets/works/xf_24.jpg" data-t="《相逢之时》 · 第 24 页"><img src="assets/works/xf_24.jpg" alt="《相逢之时》第24页" loading="lazy"><span class="g-no">24</span></div>
+<div class="g-item" data-i="25" data-src="assets/works/xf_25.jpg" data-t="《相逢之时》 · 第 25 页"><img src="assets/works/xf_25.jpg" alt="《相逢之时》第25页" loading="lazy"><span class="g-no">25</span></div>
+<div class="g-item" data-i="26" data-src="assets/works/xf_26.jpg" data-t="《相逢之时》 · 第 26 页"><img src="assets/works/xf_26.jpg" alt="《相逢之时》第26页" loading="lazy"><span class="g-no">26</span></div>
+<div class="g-item" data-i="27" data-src="assets/works/xf_27.jpg" data-t="《相逢之时》 · 第 27 页"><img src="assets/works/xf_27.jpg" alt="《相逢之时》第27页" loading="lazy"><span class="g-no">27</span></div>
+<div class="g-item" data-i="28" data-src="assets/works/xf_28.jpg" data-t="《相逢之时》 · 第 28 页"><img src="assets/works/xf_28.jpg" alt="《相逢之时》第28页" loading="lazy"><span class="g-no">28</span></div>
+<div class="g-item" data-i="29" data-src="assets/works/xf_29.jpg" data-t="《相逢之时》 · 第 29 页"><img src="assets/works/xf_29.jpg" alt="《相逢之时》第29页" loading="lazy"><span class="g-no">29</span></div>
+<div class="g-item" data-i="30" data-src="assets/works/xf_30.jpg" data-t="《相逢之时》 · 第 30 页"><img src="assets/works/xf_30.jpg" alt="《相逢之时》第30页" loading="lazy"><span class="g-no">30</span></div>
+<div class="g-item" data-i="31" data-src="assets/works/xf_31.jpg" data-t="《相逢之时》 · 第 31 页"><img src="assets/works/xf_31.jpg" alt="《相逢之时》第31页" loading="lazy"><span class="g-no">31</span></div>
+<div class="g-item" data-i="32" data-src="assets/works/xf_32.jpg" data-t="《相逢之时》 · 第 32 页"><img src="assets/works/xf_32.jpg" alt="《相逢之时》第32页" loading="lazy"><span class="g-no">32</span></div>
+    </div>
+    <div class="more-hint">点击任意页面放大欣赏 · 共 <b>32</b> 页</div>
+  </div>
+</section>
+
+<!-- ===== 漫画 ===== -->
+<section id="manhua" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">WORKS 贰</div>
+        <h2 class="sec-title">漫画《魔术师的禁果》<small>FIRST MANGA</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="book-intro">
+      <div class="book-cover">
+        <span class="book-cover-tag">第一部漫画</span>
+        <img src="assets/works/jg_01.jpg" alt="《魔术师的禁果》封面">
+      </div>
+      <div class="book-info">
+        <h3>魔术师的禁果</h3>
+        <div class="pen">作者：茫氓氓莽</div>
+        <p>我的第一部漫画作品，共 27 页。在分镜、黑白关系与叙事节奏上完成了从插画到漫画的跨越。</p>
+        <div class="book-meta">
+          <span><b>27</b>页</span>
+          <span><b>1</b>部</span>
+          <span><b>2025</b>年</span>
+        </div>
+      </div>
+    </div>
+    <div class="gallery jg-gallery" id="jgGallery">
+<div class="g-item" data-i="1" data-src="assets/works/jg_01.jpg" data-t="《魔术师的禁果》 · 第 1 页"><img src="assets/works/jg_01.jpg" alt="《魔术师的禁果》第1页" loading="lazy"><span class="g-no">01</span></div>
+<div class="g-item" data-i="2" data-src="assets/works/jg_02.jpg" data-t="《魔术师的禁果》 · 第 2 页"><img src="assets/works/jg_02.jpg" alt="《魔术师的禁果》第2页" loading="lazy"><span class="g-no">02</span></div>
+<div class="g-item" data-i="3" data-src="assets/works/jg_03.jpg" data-t="《魔术师的禁果》 · 第 3 页"><img src="assets/works/jg_03.jpg" alt="《魔术师的禁果》第3页" loading="lazy"><span class="g-no">03</span></div>
+<div class="g-item" data-i="4" data-src="assets/works/jg_04.jpg" data-t="《魔术师的禁果》 · 第 4 页"><img src="assets/works/jg_04.jpg" alt="《魔术师的禁果》第4页" loading="lazy"><span class="g-no">04</span></div>
+<div class="g-item" data-i="5" data-src="assets/works/jg_05.jpg" data-t="《魔术师的禁果》 · 第 5 页"><img src="assets/works/jg_05.jpg" alt="《魔术师的禁果》第5页" loading="lazy"><span class="g-no">05</span></div>
+<div class="g-item" data-i="6" data-src="assets/works/jg_06.jpg" data-t="《魔术师的禁果》 · 第 6 页"><img src="assets/works/jg_06.jpg" alt="《魔术师的禁果》第6页" loading="lazy"><span class="g-no">06</span></div>
+<div class="g-item" data-i="7" data-src="assets/works/jg_07.jpg" data-t="《魔术师的禁果》 · 第 7 页"><img src="assets/works/jg_07.jpg" alt="《魔术师的禁果》第7页" loading="lazy"><span class="g-no">07</span></div>
+<div class="g-item" data-i="8" data-src="assets/works/jg_08.jpg" data-t="《魔术师的禁果》 · 第 8 页"><img src="assets/works/jg_08.jpg" alt="《魔术师的禁果》第8页" loading="lazy"><span class="g-no">08</span></div>
+<div class="g-item" data-i="9" data-src="assets/works/jg_09.jpg" data-t="《魔术师的禁果》 · 第 9 页"><img src="assets/works/jg_09.jpg" alt="《魔术师的禁果》第9页" loading="lazy"><span class="g-no">09</span></div>
+<div class="g-item" data-i="10" data-src="assets/works/jg_10.jpg" data-t="《魔术师的禁果》 · 第 10 页"><img src="assets/works/jg_10.jpg" alt="《魔术师的禁果》第10页" loading="lazy"><span class="g-no">10</span></div>
+<div class="g-item" data-i="11" data-src="assets/works/jg_11.jpg" data-t="《魔术师的禁果》 · 第 11 页"><img src="assets/works/jg_11.jpg" alt="《魔术师的禁果》第11页" loading="lazy"><span class="g-no">11</span></div>
+<div class="g-item" data-i="12" data-src="assets/works/jg_12.jpg" data-t="《魔术师的禁果》 · 第 12 页"><img src="assets/works/jg_12.jpg" alt="《魔术师的禁果》第12页" loading="lazy"><span class="g-no">12</span></div>
+<div class="g-item" data-i="13" data-src="assets/works/jg_13.jpg" data-t="《魔术师的禁果》 · 第 13 页"><img src="assets/works/jg_13.jpg" alt="《魔术师的禁果》第13页" loading="lazy"><span class="g-no">13</span></div>
+<div class="g-item" data-i="14" data-src="assets/works/jg_14.jpg" data-t="《魔术师的禁果》 · 第 14 页"><img src="assets/works/jg_14.jpg" alt="《魔术师的禁果》第14页" loading="lazy"><span class="g-no">14</span></div>
+<div class="g-item" data-i="15" data-src="assets/works/jg_15.jpg" data-t="《魔术师的禁果》 · 第 15 页"><img src="assets/works/jg_15.jpg" alt="《魔术师的禁果》第15页" loading="lazy"><span class="g-no">15</span></div>
+<div class="g-item" data-i="16" data-src="assets/works/jg_16.jpg" data-t="《魔术师的禁果》 · 第 16 页"><img src="assets/works/jg_16.jpg" alt="《魔术师的禁果》第16页" loading="lazy"><span class="g-no">16</span></div>
+<div class="g-item" data-i="17" data-src="assets/works/jg_17.jpg" data-t="《魔术师的禁果》 · 第 17 页"><img src="assets/works/jg_17.jpg" alt="《魔术师的禁果》第17页" loading="lazy"><span class="g-no">17</span></div>
+<div class="g-item" data-i="18" data-src="assets/works/jg_18.jpg" data-t="《魔术师的禁果》 · 第 18 页"><img src="assets/works/jg_18.jpg" alt="《魔术师的禁果》第18页" loading="lazy"><span class="g-no">18</span></div>
+<div class="g-item" data-i="19" data-src="assets/works/jg_19.jpg" data-t="《魔术师的禁果》 · 第 19 页"><img src="assets/works/jg_19.jpg" alt="《魔术师的禁果》第19页" loading="lazy"><span class="g-no">19</span></div>
+<div class="g-item" data-i="20" data-src="assets/works/jg_20.jpg" data-t="《魔术师的禁果》 · 第 20 页"><img src="assets/works/jg_20.jpg" alt="《魔术师的禁果》第20页" loading="lazy"><span class="g-no">20</span></div>
+<div class="g-item" data-i="21" data-src="assets/works/jg_21.jpg" data-t="《魔术师的禁果》 · 第 21 页"><img src="assets/works/jg_21.jpg" alt="《魔术师的禁果》第21页" loading="lazy"><span class="g-no">21</span></div>
+<div class="g-item" data-i="22" data-src="assets/works/jg_22.jpg" data-t="《魔术师的禁果》 · 第 22 页"><img src="assets/works/jg_22.jpg" alt="《魔术师的禁果》第22页" loading="lazy"><span class="g-no">22</span></div>
+<div class="g-item" data-i="23" data-src="assets/works/jg_23.jpg" data-t="《魔术师的禁果》 · 第 23 页"><img src="assets/works/jg_23.jpg" alt="《魔术师的禁果》第23页" loading="lazy"><span class="g-no">23</span></div>
+<div class="g-item" data-i="24" data-src="assets/works/jg_24.jpg" data-t="《魔术师的禁果》 · 第 24 页"><img src="assets/works/jg_24.jpg" alt="《魔术师的禁果》第24页" loading="lazy"><span class="g-no">24</span></div>
+<div class="g-item" data-i="25" data-src="assets/works/jg_25.jpg" data-t="《魔术师的禁果》 · 第 25 页"><img src="assets/works/jg_25.jpg" alt="《魔术师的禁果》第25页" loading="lazy"><span class="g-no">25</span></div>
+<div class="g-item" data-i="26" data-src="assets/works/jg_26.jpg" data-t="《魔术师的禁果》 · 第 26 页"><img src="assets/works/jg_26.jpg" alt="《魔术师的禁果》第26页" loading="lazy"><span class="g-no">26</span></div>
+<div class="g-item" data-i="27" data-src="assets/works/jg_27.jpg" data-t="《魔术师的禁果》 · 第 27 页"><img src="assets/works/jg_27.jpg" alt="《魔术师的禁果》第27页" loading="lazy"><span class="g-no">27</span></div>
+    </div>
+    <div class="more-hint">点击任意页面放大欣赏 · 共 <b>27</b> 页</div>
+  </div>
+</section>
+
+<!-- ===== AI 短剧 ===== -->
+<section id="video">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">AI CINEMA 叁</div>
+        <h2 class="sec-title">AI 短剧作品<small>AI SHORT DRAMA</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <p class="sec-desc">独立完成从剧本、角色资产、分镜到 AI 生成的短剧全流程。竖屏短剧为主，覆盖古装权谋、赛博仙侠、都市奇幻、末日丧尸等题材。</p>
+    <div class="video-grid" id="videoGrid">
+      <div class="v-card" data-file="assets/videos/vid_dangjia.mp4" data-title="今天开始我当家"><div class="v-thumb"><img src="assets/videos/poster_vid_dangjia.jpg" alt="今天开始我当家" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">今天开始我当家</div><div class="v-sub"><span>AI 短剧 · 家庭 · 172 秒</span></div><span class="v-tag">古装</span></div></div>
+      <div class="v-card" data-file="assets/videos/vid_quanyingwen.mp4" data-title="全英文短剧"><div class="v-thumb"><img src="assets/videos/poster_vid_quanyingwen.jpg" alt="全英文短剧" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">全英文短剧</div><div class="v-sub"><span>AI 短剧 · 国际版 · 125 秒</span></div><span class="v-tag">海外</span></div></div>
+      <div class="v-card" data-file="assets/videos/vid_gongzhu.mp4" data-title="公主只想苟"><div class="v-thumb"><img src="assets/videos/poster_vid_gongzhu.jpg" alt="公主只想苟" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">公主只想苟</div><div class="v-sub"><span>AI 短剧 · 权谋成长 · 318 秒</span></div><span class="v-tag">古装</span></div></div>
+      <div class="v-card" data-file="assets/videos/vid_taiyangshen.mp4" data-title="海外短剧 · 太阳神"><div class="v-thumb"><img src="assets/videos/poster_vid_taiyangshen.jpg" alt="海外短剧太阳神" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 太阳神</div><div class="v-sub"><span>AI 短剧 · 海外样片 · 68 秒</span></div><span class="v-tag">海外</span></div></div>
+      <div class="v-card" data-file="assets/videos/vid_langren.mp4" data-title="狼人"><div class="v-thumb"><img src="assets/videos/poster_vid_langren.jpg" alt="狼人" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">狼人</div><div class="v-sub"><span>AI 短剧 · 悬疑 · 57 秒</span></div><span class="v-tag">悬疑</span></div></div>
+      <div class="v-card" data-file="assets/videos/vid_shenming.mp4" data-title="神明离线后，暴君信徒彻底疯了"><div class="v-thumb"><img src="assets/videos/poster_vid_shenming.jpg" alt="神明离线后" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">神明离线后，暴君信徒彻底疯了</div><div class="v-sub"><span>AI 短剧 · 奇幻 · 73 秒</span></div><span class="v-tag">奇幻</span></div></div>
+      <div class="v-card" data-file="assets/videos/vid_youse.mp4" data-title="釉色里的暗纹"><div class="v-thumb"><img src="assets/videos/poster_vid_youse.jpg" alt="釉色里的暗纹" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">釉色里的暗纹</div><div class="v-sub"><span>AI 短剧 · 8 月样片 · 197 秒</span></div><span class="v-tag">剧情</span></div></div>
+      <div class="v-card" data-file="assets/videos/vid_youse_full.mp4" data-title="釉色里的暗纹 · 完整版"><div class="v-thumb"><img src="assets/videos/poster_vid_youse_full.jpg" alt="釉色里的暗纹完整版" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">釉色里的暗纹 · 完整版</div><div class="v-sub"><span>AI 短剧 · 完整成片 · 241 秒</span></div><span class="v-tag">剧情</span></div></div>
+      <div class="v-card" data-file="assets/videos/vid_gaoguang.mp4" data-title="高光剪辑"><div class="v-thumb"><img src="assets/videos/poster_vid_gaoguang.jpg" alt="高光剪辑" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">高光剪辑</div><div class="v-sub"><span>AI 短剧 · 高光混剪 · 80 秒</span></div><span class="v-tag">混剪</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 剧本 ===== -->
+<section id="script" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">SCREENPLAY 肆</div>
+        <h2 class="sec-title">剧本创作<small>SCREENPLAY</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <p class="sec-desc">含完整剧本、分镜脚本与场景剧本，可直接下载查看。中英双语、古装、赛博、惊悚等多题材。</p>
+    <div class="script-grid" id="scriptGrid"></div>
+  </div>
+</section>
+
+<!-- ===== 角色资产 ===== -->
+<section id="asset">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">CHARACTER DESIGN 伍</div>
+        <h2 class="sec-title">角色与场景资产<small>ASSETS</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <p class="sec-desc">AI 短剧制作中的角色三视图、服装设定与场景资产，保障跨镜头的一致性。</p>
+    <div class="asset-grid" id="assetGrid">
+      <div class="a-item"><img src="assets/works/ai_char_zhunv.png" alt="女主三视图" loading="lazy"><div class="a-cap">女主 · 三视图</div></div>
+      <div class="a-item"><img src="assets/works/ai_char_zhunv_changfu.png" alt="女主常服" loading="lazy"><div class="a-cap">女主 · 常服</div></div>
+      <div class="a-item"><img src="assets/works/ai_char_jiangjun.png" alt="将军战袍" loading="lazy"><div class="a-cap">将军 · 战袍</div></div>
+      <div class="a-item"><img src="assets/works/ai_char_shifu.png" alt="师傅华服" loading="lazy"><div class="a-cap">师傅 · 华服</div></div>
+      <div class="a-item"><img src="assets/works/ai_scene_chaotang.png" alt="朝堂场景" loading="lazy"><div class="a-cap">场景 · 朝堂</div></div>
+      <div class="a-item"><img src="assets/works/ai_scene_zhanchang.png" alt="战场场景" loading="lazy"><div class="a-cap">场景 · 战场</div></div>
+      <div class="a-item"><img src="assets/works/ai_scene_yuhuayuan.png" alt="御花园场景" loading="lazy"><div class="a-cap">场景 · 御花园</div></div>
+      <div class="a-item"><img src="assets/works/ai_scene_shenfu.png" alt="沈府场景" loading="lazy"><div class="a-cap">场景 · 沈府</div></div>
+      <div class="a-item"><img src="assets/works/ai_scene_hundun.png" alt="馄饨摊场景" loading="lazy"><div class="a-cap">场景 · 馄饨摊</div></div>
+      <div class="a-item"><img src="assets/works/ai_ov_male.jpg" alt="海外短剧男主" loading="lazy"><div class="a-cap">海外短剧 · 男主</div></div>
+      <div class="a-item"><img src="assets/works/ai_ov_female.jpg" alt="海外短剧女主" loading="lazy"><div class="a-cap">海外短剧 · 女主</div></div>
+      <div class="a-item"><img src="assets/works/ai_ov_1.jpg" alt="海外短剧人物资产" loading="lazy"><div class="a-cap">海外短剧 · 人物资产</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 技艺 ===== -->
+<section id="craft" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">CRAFTS 陆</div>
+        <h2 class="sec-title">技艺矩阵<small>SKILLS</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="craft-grid">
+      <div class="craft">
+        <div class="craft-num">01</div>
+        <h3>传统美术</h3>
+        <ul>
+          <li>手绘插画 / 板绘</li>
+          <li>漫画分镜与叙事</li>
+          <li>色彩与光影训练</li>
+        </ul>
+      </div>
+      <div class="craft">
+        <div class="craft-num">02</div>
+        <h3>AI 生图</h3>
+        <ul>
+          <li>角色设计 / 三视图</li>
+          <li>场景概念与氛围图</li>
+          <li>电商视觉 / 主图详情</li>
+        </ul>
+      </div>
+      <div class="craft">
+        <div class="craft-num">03</div>
+        <h3>AI 视频</h3>
+          <ul>
+          <li>文生视频 / 图生视频</li>
+          <li>短剧成片生成</li>
+          <li>高光剪辑与混剪</li>
+        </ul>
+      </div>
+      <div class="craft">
+        <div class="craft-num">04</div>
+        <h3>剧本与制作</h3>
+        <ul>
+          <li>短剧剧本 / 分镜脚本</li>
+          <li>配音与音效设计</li>
+          <li>全流程项目管理</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 经历 ===== -->
+<section id="jingli">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">PATH 柒</div>
+        <h2 class="sec-title">成长轨迹<small>JOURNEY</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">2021 — 2025</div>
+        <div class="tl-title">四川师范大学 · 美术学</div>
+        <div class="tl-desc">系统学习美术学，完成从<b>造型基础</b>到<b>创作表达</b>的训练，奠定插画与漫画的底色。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2024 — 2025</div>
+        <div class="tl-title">电商设计 · 商业视觉实践</div>
+        <div class="tl-desc">从事<b>电商美工与视觉设计</b>，完成商品主图、详情页与品牌视觉项目，理解商业与美学的结合。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2025</div>
+        <div class="tl-title">个人创作 · 插画集与漫画</div>
+        <div class="tl-desc">完成第一本插画集《相逢之时》（32 页）与第一部漫画《魔术师的禁果》（27 页），以笔名<b>牧野燃灯 / 茫氓氓莽</b>署名。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2026</div>
+        <div class="tl-title">AI 短剧 · 全流程创作与教学</div>
+        <div class="tl-desc">转向<b>AI 短剧</b>赛道：独立完成<b>剧本 — 角色/场景资产 — 分镜 — AI 生成 — 成片</b>全流程，产出 9+ 部短剧样片；同时担任 AI 视频学员指导，输出多部学员商单作品。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 联系 ===== -->
+<section id="contact" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="contact">
+      <div class="seal">刘</div>
+      <h3>期待与你相逢</h3>
+      <div class="c-sub">OPEN TO OPPORTUNITIES · 成都 · 随时到岗</div>
+      <div class="contact-lines">
+        <div class="c-line"><b>邮箱</b><a href="mailto:166098943@qq.com">166098943@qq.com</a></div>
+        <div class="c-line"><b>电话</b><a href="tel:17828831105">178-2883-1105</a></div>
+      </div>
+      <div class="ready">插画 · 漫画 · AI 短剧 · 剧本 · 视觉设计 — 全能型视觉创作者</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-seal">刘</div>
+  <p><b>刘彦</b> · VISUAL CREATOR · 2026</p>
+</footer>
+
+<!-- ===== 页面灯箱（画集/漫画共用） ===== -->
+<div class="lightbox" id="bookLightbox">
+  <div class="lb-inner" style="max-width:860px">
+    <button class="lb-close" id="bookClose">×</button>
+    <img id="bookLbImg" src="" alt="" style="width:100%;display:block;border:1px solid rgba(255,255,255,.18)">
+    <div class="lb-title" id="bookLbTitle"></div>
+  </div>
+</div>
+
+<!-- ===== 视频灯箱 ===== -->
+<div class="lightbox" id="videoLightbox">
+  <div class="lb-inner">
+    <button class="lb-close" id="videoClose">×</button>
+    <video id="videoPlayer" controls playsinline preload="none"></video>
+    <div class="lb-title" id="videoLbTitle"></div>
+    <div class="lb-hint">点击画面播放 / 暂停 · 全屏观看</div>
+  </div>
+</div>
+
+<script>
+/* ===== 画集/漫画灯箱 ===== */
+(function(){
+  var lb=document.getElementById('bookLightbox'), lbImg=document.getElementById('bookLbImg'), lbT=document.getElementById('bookLbTitle');
+  function openLb(src,t){
+    lbImg.src=src;lbT.textContent=t;lb.classList.add('open');document.body.style.overflow='hidden';
+  }
+  document.querySelectorAll('.g-item').forEach(function(el){
+    el.addEventListener('click',function(){openLb(el.dataset.src,el.dataset.t);});
+  });
+  document.getElementById('bookClose').addEventListener('click',function(){lb.classList.remove('open');document.body.style.overflow='';});
+  lb.addEventListener('click',function(e){if(e.target===lb){lb.classList.remove('open');document.body.style.overflow='';}});
+})();
+
+/* ===== AI 视频 ===== */
+(function(){
+  var g=document.getElementById('videoGrid'), lb=document.getElementById('videoLightbox'),
+      player=document.getElementById('videoPlayer'), t=document.getElementById('videoLbTitle');
+  function openVideo(file,title){
+    player.src=file;t.textContent=title;lb.classList.add('open');document.body.style.overflow='hidden';
+    player.play().catch(function(){});
+  }
+  g.addEventListener('click',function(e){
+    var card=e.target.closest('.v-card');
+    if(card) openVideo(card.dataset.file,card.dataset.title);
+  });
+  function closeVideo(){lb.classList.remove('open');player.pause();player.removeAttribute('src');player.load();document.body.style.overflow='';}
+  document.getElementById('videoClose').addEventListener('click',closeVideo);
+  lb.addEventListener('click',function(e){if(e.target===lb)closeVideo();});
+})();
+
+/* ===== 剧本 ===== */
+(function(){
+  var ss=[
+    {t:'《这个秘境正经吗？》', type:'9 月样片 · 赛博仙侠 · 多元融合', d:'秘境招商售楼处 × 九棺迷阵 × 系统底层监控室，3 大场景 6 角色矩阵，把修仙做成开公司。', f:'assets/scripts/这个秘境正经吗.docx', tag:'剧本'},
+    {t:'《公主只想苟》', type:'3 分钟 · 权谋 · 轻松 · 成长', d:'十九公主只想苟住，奈何身边兄弟都太废。醉酒情绪切换、战场打斗的完整表演脚本。', f:'assets/scripts/公主只想苟.docx', tag:'剧本'},
+    {t:'《LAST STAND》最后的防线', type:'3 分钟 · 丧尸末日 · 中英双语', d:'国际版双语剧本：前急诊科护士 Elena 与失孤父亲 Mason 在避难所对抗冷血管理者。', f:'assets/scripts/LAST STAND.docx', tag:'剧本'},
+    {t:'《死后成神》', type:'3 分钟 · 都市奇幻 · 悬疑', d:'濒死觉醒异能的世界：只有男主看见每个人死后会获得什么能力——直到他看见自己。', f:'assets/scripts/死后成神.docx', tag:'剧本'},
+    {t:'《蜗牛》', type:'3 分钟 · 都市惊悚 · 因果报应', d:'在世界尽头的诅咒之地踩碎一只濒危蜗牛，从此被它永生永世追杀。', f:'assets/scripts/蜗牛.docx', tag:'剧本'},
+    {t:'《饭灵根也能修仙》', type:'修仙 · 喜剧', d:'测灵台前灵根全无只剩饭香——废灵根少女的爆笑修仙路。', f:'assets/scripts/饭灵根也能修仙.docx', tag:'剧本'},
+    {t:'《最后一题》', type:'古装 · 女官应试', d:'女试大殿，旧制度凝视下的最后一题：从隐忍顺从到凌厉坚定的眼神蜕变。', f:'assets/scripts/最后一题.docx', tag:'剧本'},
+    {t:'《釉色里的暗纹》8 月样片', type:'AI 短剧样片 · 完整剧本', d:'8 月样片完整剧本，配套分镜脚本与成片。', f:'assets/scripts/8月样片剧本《釉色里的暗纹》.pdf', tag:'剧本'},
+    {t:'《釉色里的暗纹》分镜脚本', type:'分镜 · Excel', d:'逐镜头分镜脚本：画面、机位、台词与时长设计。', f:'assets/scripts/《釉色里的暗纹》分镜脚本.xlsx', tag:'分镜'},
+    {t:'Chloe & Xavier 情欲对峙', type:'场景剧本 · Excel', d:'角色对峙场景剧本，情绪节奏与台词设计。', f:'assets/scripts/ChloeXavier情欲对峙场景剧本.xlsx', tag:'场景'},
+    {t:'《这个秘境正经吗？》9 月样片', type:'9 月样片 · 场景/角色矩阵', d:'赛博仙侠样片企划：3 大场景 × 6 角色服装矩阵总览。', f:'assets/scripts/9月样片.docx', tag:'企划'}
+  ];
+  var g=document.getElementById('scriptGrid');
+  ss.forEach(function(s,i){
+    g.insertAdjacentHTML('beforeend',
+      '<div class="s-card">'+
+      '<div class="s-no">SCP '+(i<10?'0':'')+(i+1)+'</div>'+
+      '<div class="s-title">'+s.t+'</div>'+
+      '<div class="s-type">'+s.type+'</div>'+
+      '<div class="s-desc">'+s.d+'</div>'+
+      '<div class="s-foot"><span class="s-role">'+s.tag+'</span><a class="s-dl" href="'+s.f+'" download>查看</a></div>'+
+      '</div>');
+  });
+})();
+
+/* ===== 移动导航 ===== */
+document.getElementById('navToggle').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.getElementById('navLinks').addEventListener('click',function(e){
+  if(e.target.tagName==='A') this.classList.remove('open');
+});
+</script>
+</body>
+</html>
