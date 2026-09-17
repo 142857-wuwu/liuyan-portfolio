@@ -260,6 +260,42 @@ footer p b{color:var(--ink)}
   .contact{padding:40px 20px}
 }
 
+
+/* ===== 相册入口 ===== */
+.album-entry{position:relative;cursor:pointer;overflow:hidden;border:1px solid var(--line);background:var(--white)}
+.album-entry img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;transition:transform .6s}
+.album-entry:hover img{transform:scale(1.04)}
+.album-mask{position:absolute;inset:0;background:rgba(43,40,35,.42);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .35s}
+.album-entry:hover .album-mask{opacity:1}
+.album-btn{border:1px solid rgba(255,255,255,.85);color:#fff;padding:10px 26px;font-size:14px;letter-spacing:3px;background:rgba(166,58,46,.35)}
+.album-cap{position:absolute;left:0;right:0;bottom:0;background:rgba(244,241,234,.94);padding:8px 14px;font-size:12.5px;color:var(--ink);letter-spacing:1px;text-align:center;border-top:1px solid var(--line)}
+
+/* ===== 相册灯箱 ===== */
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.35);color:#fff;font-size:22px;cursor:pointer;z-index:5;border-radius:2px}
+.lb-nav:hover{background:var(--cinnabar)}
+.lb-prev{left:10px}.lb-next{right:10px}
+.lb-page{position:absolute;bottom:-42px;left:50%;transform:translateX(-50%);color:var(--paper);font-size:13px;letter-spacing:2px;white-space:nowrap}
+#albumLightbox .lb-inner{max-width:900px}
+#albumLightbox img{max-height:78vh;width:auto;max-width:100%;margin:0 auto;display:block;object-fit:contain}
+
+/* ===== 无海报视频卡 ===== */
+.v-thumb.noposter{background:linear-gradient(160deg,#3a3630,#575046);display:flex;align-items:center;justify-content:center}
+.v-thumb.noposter .v-play{width:54px;height:54px;border:1.5px solid rgba(255,255,255,.9);border-radius:50%;position:relative;background:rgba(166,58,46,.35)}
+.v-thumb.noposter .v-play::after{content:"";position:absolute;left:22px;top:16px;border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent}
+
+/* ===== 横图修复（不裁切不压扁） ===== */
+.g-item.wide img{aspect-ratio:auto;object-fit:contain;background:#fff}
+.g-item.wide{display:flex;align-items:center;justify-content:center}
+
+/* ===== 海外短剧低调 ===== */
+.os-grid .v-card .v-title{font-size:13px;letter-spacing:1px}
+.os-grid .v-card .v-sub{font-size:11px}
+
+@media(max-width:640px){
+  .album-btn{font-size:12px;padding:8px 16px}
+  .lb-nav{width:38px;height:38px;font-size:18px}
+}
+
 /* ===== 岗位视角 ===== */
 .role-box{border:1px solid var(--line);background:var(--white);padding:38px 36px}
 .role-eyebrow{font-size:12px;color:var(--cinnabar);letter-spacing:4px;font-weight:700}
@@ -319,12 +355,13 @@ footer p b{color:var(--ink)}
     <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#huaji">插画集</a></li>
-      <li><a href="#manhua">漫画</a></li>
       <li><a href="#artgallery">美术作品</a></li>
       <li><a href="#video">AI 短剧</a></li>
+      <li><a href="#student">学员商单</a></li>
+      <li><a href="#overseas">海外短剧</a></li>
       <li><a href="#script">剧本</a></li>
       <li><a href="#asset">角色资产</a></li>
-      <li><a href="#craft">技艺</a></li>
+      <li><a href="#manhua">漫画</a></li>
       <li><a href="#jingli">经历</a></li>
       <li><a href="#contact">联系</a></li>
     </ul>
@@ -412,109 +449,18 @@ footer p b{color:var(--ink)}
         </div>
       </div>
     </div>
-    <div class="gallery" id="xfGallery">
-<div class="g-item" data-i="1" data-src="assets/works/xf_01.jpg" data-t="《相逢之时》 · 第 1 页"><img src="assets/works/xf_01.jpg" alt="《相逢之时》第1页" loading="lazy"><span class="g-no">01</span></div>
-<div class="g-item" data-i="2" data-src="assets/works/xf_02.jpg" data-t="《相逢之时》 · 第 2 页"><img src="assets/works/xf_02.jpg" alt="《相逢之时》第2页" loading="lazy"><span class="g-no">02</span></div>
-<div class="g-item" data-i="3" data-src="assets/works/xf_03.jpg" data-t="《相逢之时》 · 第 3 页"><img src="assets/works/xf_03.jpg" alt="《相逢之时》第3页" loading="lazy"><span class="g-no">03</span></div>
-<div class="g-item" data-i="4" data-src="assets/works/xf_04.jpg" data-t="《相逢之时》 · 第 4 页"><img src="assets/works/xf_04.jpg" alt="《相逢之时》第4页" loading="lazy"><span class="g-no">04</span></div>
-<div class="g-item" data-i="5" data-src="assets/works/xf_05.jpg" data-t="《相逢之时》 · 第 5 页"><img src="assets/works/xf_05.jpg" alt="《相逢之时》第5页" loading="lazy"><span class="g-no">05</span></div>
-<div class="g-item" data-i="6" data-src="assets/works/xf_06.jpg" data-t="《相逢之时》 · 第 6 页"><img src="assets/works/xf_06.jpg" alt="《相逢之时》第6页" loading="lazy"><span class="g-no">06</span></div>
-<div class="g-item" data-i="7" data-src="assets/works/xf_07.jpg" data-t="《相逢之时》 · 第 7 页"><img src="assets/works/xf_07.jpg" alt="《相逢之时》第7页" loading="lazy"><span class="g-no">07</span></div>
-<div class="g-item" data-i="8" data-src="assets/works/xf_08.jpg" data-t="《相逢之时》 · 第 8 页"><img src="assets/works/xf_08.jpg" alt="《相逢之时》第8页" loading="lazy"><span class="g-no">08</span></div>
-<div class="g-item" data-i="9" data-src="assets/works/xf_09.jpg" data-t="《相逢之时》 · 第 9 页"><img src="assets/works/xf_09.jpg" alt="《相逢之时》第9页" loading="lazy"><span class="g-no">09</span></div>
-<div class="g-item" data-i="10" data-src="assets/works/xf_10.jpg" data-t="《相逢之时》 · 第 10 页"><img src="assets/works/xf_10.jpg" alt="《相逢之时》第10页" loading="lazy"><span class="g-no">10</span></div>
-<div class="g-item" data-i="11" data-src="assets/works/xf_11.jpg" data-t="《相逢之时》 · 第 11 页"><img src="assets/works/xf_11.jpg" alt="《相逢之时》第11页" loading="lazy"><span class="g-no">11</span></div>
-<div class="g-item" data-i="12" data-src="assets/works/xf_12.jpg" data-t="《相逢之时》 · 第 12 页"><img src="assets/works/xf_12.jpg" alt="《相逢之时》第12页" loading="lazy"><span class="g-no">12</span></div>
-<div class="g-item" data-i="13" data-src="assets/works/xf_13.jpg" data-t="《相逢之时》 · 第 13 页"><img src="assets/works/xf_13.jpg" alt="《相逢之时》第13页" loading="lazy"><span class="g-no">13</span></div>
-<div class="g-item" data-i="14" data-src="assets/works/xf_14.jpg" data-t="《相逢之时》 · 第 14 页"><img src="assets/works/xf_14.jpg" alt="《相逢之时》第14页" loading="lazy"><span class="g-no">14</span></div>
-<div class="g-item" data-i="15" data-src="assets/works/xf_15.jpg" data-t="《相逢之时》 · 第 15 页"><img src="assets/works/xf_15.jpg" alt="《相逢之时》第15页" loading="lazy"><span class="g-no">15</span></div>
-<div class="g-item" data-i="16" data-src="assets/works/xf_16.jpg" data-t="《相逢之时》 · 第 16 页"><img src="assets/works/xf_16.jpg" alt="《相逢之时》第16页" loading="lazy"><span class="g-no">16</span></div>
-<div class="g-item" data-i="17" data-src="assets/works/xf_17.jpg" data-t="《相逢之时》 · 第 17 页"><img src="assets/works/xf_17.jpg" alt="《相逢之时》第17页" loading="lazy"><span class="g-no">17</span></div>
-<div class="g-item" data-i="18" data-src="assets/works/xf_18.jpg" data-t="《相逢之时》 · 第 18 页"><img src="assets/works/xf_18.jpg" alt="《相逢之时》第18页" loading="lazy"><span class="g-no">18</span></div>
-<div class="g-item" data-i="19" data-src="assets/works/xf_19.jpg" data-t="《相逢之时》 · 第 19 页"><img src="assets/works/xf_19.jpg" alt="《相逢之时》第19页" loading="lazy"><span class="g-no">19</span></div>
-<div class="g-item" data-i="20" data-src="assets/works/xf_20.jpg" data-t="《相逢之时》 · 第 20 页"><img src="assets/works/xf_20.jpg" alt="《相逢之时》第20页" loading="lazy"><span class="g-no">20</span></div>
-<div class="g-item" data-i="21" data-src="assets/works/xf_21.jpg" data-t="《相逢之时》 · 第 21 页"><img src="assets/works/xf_21.jpg" alt="《相逢之时》第21页" loading="lazy"><span class="g-no">21</span></div>
-<div class="g-item" data-i="22" data-src="assets/works/xf_22.jpg" data-t="《相逢之时》 · 第 22 页"><img src="assets/works/xf_22.jpg" alt="《相逢之时》第22页" loading="lazy"><span class="g-no">22</span></div>
-<div class="g-item" data-i="23" data-src="assets/works/xf_23.jpg" data-t="《相逢之时》 · 第 23 页"><img src="assets/works/xf_23.jpg" alt="《相逢之时》第23页" loading="lazy"><span class="g-no">23</span></div>
-<div class="g-item" data-i="24" data-src="assets/works/xf_24.jpg" data-t="《相逢之时》 · 第 24 页"><img src="assets/works/xf_24.jpg" alt="《相逢之时》第24页" loading="lazy"><span class="g-no">24</span></div>
-<div class="g-item" data-i="25" data-src="assets/works/xf_25.jpg" data-t="《相逢之时》 · 第 25 页"><img src="assets/works/xf_25.jpg" alt="《相逢之时》第25页" loading="lazy"><span class="g-no">25</span></div>
-<div class="g-item" data-i="26" data-src="assets/works/xf_26.jpg" data-t="《相逢之时》 · 第 26 页"><img src="assets/works/xf_26.jpg" alt="《相逢之时》第26页" loading="lazy"><span class="g-no">26</span></div>
-<div class="g-item" data-i="27" data-src="assets/works/xf_27.jpg" data-t="《相逢之时》 · 第 27 页"><img src="assets/works/xf_27.jpg" alt="《相逢之时》第27页" loading="lazy"><span class="g-no">27</span></div>
-<div class="g-item" data-i="28" data-src="assets/works/xf_28.jpg" data-t="《相逢之时》 · 第 28 页"><img src="assets/works/xf_28.jpg" alt="《相逢之时》第28页" loading="lazy"><span class="g-no">28</span></div>
-<div class="g-item" data-i="29" data-src="assets/works/xf_29.jpg" data-t="《相逢之时》 · 第 29 页"><img src="assets/works/xf_29.jpg" alt="《相逢之时》第29页" loading="lazy"><span class="g-no">29</span></div>
-<div class="g-item" data-i="30" data-src="assets/works/xf_30.jpg" data-t="《相逢之时》 · 第 30 页"><img src="assets/works/xf_30.jpg" alt="《相逢之时》第30页" loading="lazy"><span class="g-no">30</span></div>
-<div class="g-item" data-i="31" data-src="assets/works/xf_31.jpg" data-t="《相逢之时》 · 第 31 页"><img src="assets/works/xf_31.jpg" alt="《相逢之时》第31页" loading="lazy"><span class="g-no">31</span></div>
-<div class="g-item" data-i="32" data-src="assets/works/xf_32.jpg" data-t="《相逢之时》 · 第 32 页"><img src="assets/works/xf_32.jpg" alt="《相逢之时》第32页" loading="lazy"><span class="g-no">32</span></div>
-    </div>
-    <div class="more-hint">点击任意页面放大欣赏 · 共 <b>32</b> 页</div>
+    <div class="album-entry"><img src="assets/works/xf_01.jpg" alt="《相逢之时》封面"><div class="album-mask"><div class="album-btn">进入相册 · 共 32 页</div></div><div class="album-cap">《相逢之时》 · 完整相册</div></div>
   </div>
 </section>
 
-<!-- ===== 漫画 ===== -->
-<section id="manhua" style="background:var(--paper-2)">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <div class="sec-num">WORKS 贰</div>
-        <h2 class="sec-title">漫画《魔术师的禁果》<small>FIRST MANGA</small></h2>
-      </div>
-      <div class="sec-line"></div>
-    </div>
-    <div class="book-intro">
-      <div class="book-cover">
-        <span class="book-cover-tag">第一部漫画</span>
-        <img src="assets/works/jg_01.jpg" alt="《魔术师的禁果》封面">
-      </div>
-      <div class="book-info">
-        <h3>魔术师的禁果</h3>
-        <div class="pen">作者：茫氓氓莽</div>
-        <p>我的第一部漫画作品，共 27 页。在分镜、黑白关系与叙事节奏上完成了从插画到漫画的跨越。</p>
-        <div class="book-meta">
-          <span><b>27</b>页</span>
-          <span><b>1</b>部</span>
-          <span><b>2025</b>年</span>
-        </div>
-      </div>
-    </div>
-    <div class="gallery jg-gallery" id="jgGallery">
-<div class="g-item" data-i="1" data-src="assets/works/jg_01.jpg" data-t="《魔术师的禁果》 · 第 1 页"><img src="assets/works/jg_01.jpg" alt="《魔术师的禁果》第1页" loading="lazy"><span class="g-no">01</span></div>
-<div class="g-item" data-i="2" data-src="assets/works/jg_02.jpg" data-t="《魔术师的禁果》 · 第 2 页"><img src="assets/works/jg_02.jpg" alt="《魔术师的禁果》第2页" loading="lazy"><span class="g-no">02</span></div>
-<div class="g-item" data-i="3" data-src="assets/works/jg_03.jpg" data-t="《魔术师的禁果》 · 第 3 页"><img src="assets/works/jg_03.jpg" alt="《魔术师的禁果》第3页" loading="lazy"><span class="g-no">03</span></div>
-<div class="g-item" data-i="4" data-src="assets/works/jg_04.jpg" data-t="《魔术师的禁果》 · 第 4 页"><img src="assets/works/jg_04.jpg" alt="《魔术师的禁果》第4页" loading="lazy"><span class="g-no">04</span></div>
-<div class="g-item" data-i="5" data-src="assets/works/jg_05.jpg" data-t="《魔术师的禁果》 · 第 5 页"><img src="assets/works/jg_05.jpg" alt="《魔术师的禁果》第5页" loading="lazy"><span class="g-no">05</span></div>
-<div class="g-item" data-i="6" data-src="assets/works/jg_06.jpg" data-t="《魔术师的禁果》 · 第 6 页"><img src="assets/works/jg_06.jpg" alt="《魔术师的禁果》第6页" loading="lazy"><span class="g-no">06</span></div>
-<div class="g-item" data-i="7" data-src="assets/works/jg_07.jpg" data-t="《魔术师的禁果》 · 第 7 页"><img src="assets/works/jg_07.jpg" alt="《魔术师的禁果》第7页" loading="lazy"><span class="g-no">07</span></div>
-<div class="g-item" data-i="8" data-src="assets/works/jg_08.jpg" data-t="《魔术师的禁果》 · 第 8 页"><img src="assets/works/jg_08.jpg" alt="《魔术师的禁果》第8页" loading="lazy"><span class="g-no">08</span></div>
-<div class="g-item" data-i="9" data-src="assets/works/jg_09.jpg" data-t="《魔术师的禁果》 · 第 9 页"><img src="assets/works/jg_09.jpg" alt="《魔术师的禁果》第9页" loading="lazy"><span class="g-no">09</span></div>
-<div class="g-item" data-i="10" data-src="assets/works/jg_10.jpg" data-t="《魔术师的禁果》 · 第 10 页"><img src="assets/works/jg_10.jpg" alt="《魔术师的禁果》第10页" loading="lazy"><span class="g-no">10</span></div>
-<div class="g-item" data-i="11" data-src="assets/works/jg_11.jpg" data-t="《魔术师的禁果》 · 第 11 页"><img src="assets/works/jg_11.jpg" alt="《魔术师的禁果》第11页" loading="lazy"><span class="g-no">11</span></div>
-<div class="g-item" data-i="12" data-src="assets/works/jg_12.jpg" data-t="《魔术师的禁果》 · 第 12 页"><img src="assets/works/jg_12.jpg" alt="《魔术师的禁果》第12页" loading="lazy"><span class="g-no">12</span></div>
-<div class="g-item" data-i="13" data-src="assets/works/jg_13.jpg" data-t="《魔术师的禁果》 · 第 13 页"><img src="assets/works/jg_13.jpg" alt="《魔术师的禁果》第13页" loading="lazy"><span class="g-no">13</span></div>
-<div class="g-item" data-i="14" data-src="assets/works/jg_14.jpg" data-t="《魔术师的禁果》 · 第 14 页"><img src="assets/works/jg_14.jpg" alt="《魔术师的禁果》第14页" loading="lazy"><span class="g-no">14</span></div>
-<div class="g-item" data-i="15" data-src="assets/works/jg_15.jpg" data-t="《魔术师的禁果》 · 第 15 页"><img src="assets/works/jg_15.jpg" alt="《魔术师的禁果》第15页" loading="lazy"><span class="g-no">15</span></div>
-<div class="g-item" data-i="16" data-src="assets/works/jg_16.jpg" data-t="《魔术师的禁果》 · 第 16 页"><img src="assets/works/jg_16.jpg" alt="《魔术师的禁果》第16页" loading="lazy"><span class="g-no">16</span></div>
-<div class="g-item" data-i="17" data-src="assets/works/jg_17.jpg" data-t="《魔术师的禁果》 · 第 17 页"><img src="assets/works/jg_17.jpg" alt="《魔术师的禁果》第17页" loading="lazy"><span class="g-no">17</span></div>
-<div class="g-item" data-i="18" data-src="assets/works/jg_18.jpg" data-t="《魔术师的禁果》 · 第 18 页"><img src="assets/works/jg_18.jpg" alt="《魔术师的禁果》第18页" loading="lazy"><span class="g-no">18</span></div>
-<div class="g-item" data-i="19" data-src="assets/works/jg_19.jpg" data-t="《魔术师的禁果》 · 第 19 页"><img src="assets/works/jg_19.jpg" alt="《魔术师的禁果》第19页" loading="lazy"><span class="g-no">19</span></div>
-<div class="g-item" data-i="20" data-src="assets/works/jg_20.jpg" data-t="《魔术师的禁果》 · 第 20 页"><img src="assets/works/jg_20.jpg" alt="《魔术师的禁果》第20页" loading="lazy"><span class="g-no">20</span></div>
-<div class="g-item" data-i="21" data-src="assets/works/jg_21.jpg" data-t="《魔术师的禁果》 · 第 21 页"><img src="assets/works/jg_21.jpg" alt="《魔术师的禁果》第21页" loading="lazy"><span class="g-no">21</span></div>
-<div class="g-item" data-i="22" data-src="assets/works/jg_22.jpg" data-t="《魔术师的禁果》 · 第 22 页"><img src="assets/works/jg_22.jpg" alt="《魔术师的禁果》第22页" loading="lazy"><span class="g-no">22</span></div>
-<div class="g-item" data-i="23" data-src="assets/works/jg_23.jpg" data-t="《魔术师的禁果》 · 第 23 页"><img src="assets/works/jg_23.jpg" alt="《魔术师的禁果》第23页" loading="lazy"><span class="g-no">23</span></div>
-<div class="g-item" data-i="24" data-src="assets/works/jg_24.jpg" data-t="《魔术师的禁果》 · 第 24 页"><img src="assets/works/jg_24.jpg" alt="《魔术师的禁果》第24页" loading="lazy"><span class="g-no">24</span></div>
-<div class="g-item" data-i="25" data-src="assets/works/jg_25.jpg" data-t="《魔术师的禁果》 · 第 25 页"><img src="assets/works/jg_25.jpg" alt="《魔术师的禁果》第25页" loading="lazy"><span class="g-no">25</span></div>
-<div class="g-item" data-i="26" data-src="assets/works/jg_26.jpg" data-t="《魔术师的禁果》 · 第 26 页"><img src="assets/works/jg_26.jpg" alt="《魔术师的禁果》第26页" loading="lazy"><span class="g-no">26</span></div>
-<div class="g-item" data-i="27" data-src="assets/works/jg_27.jpg" data-t="《魔术师的禁果》 · 第 27 页"><img src="assets/works/jg_27.jpg" alt="《魔术师的禁果》第27页" loading="lazy"><span class="g-no">27</span></div>
-    </div>
-    <div class="more-hint">点击任意页面放大欣赏 · 共 <b>27</b> 页</div>
-  </div>
-</section>
+
 
 <!-- ===== 美术作品 ===== -->
 <section id="artgallery" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-num">ART GALLERY 叁</div>
+        <div class="sec-num">ART GALLERY 贰</div>
         <h2 class="sec-title">美术与商业作品<small>ART & COMMERCIAL WORKS</small></h2>
       </div>
       <div class="sec-line"></div>
@@ -532,20 +478,20 @@ footer p b{color:var(--ink)}
       <button class="af" data-cat="card">页面·卡牌 27</button>
     </div>
     <div id="artGroups">
-<div class="art-group" data-g="oil"><div class="ag-head"><span class="ag-no">01</span><span class="ag-title">油画</span><span class="ag-en">OIL PAINTING</span><span class="ag-desc">学院写实 · 人物与静物</span></div><div class="art-gallery "><div class="g-item" data-src="assets/art/oil/001.jpg" data-t="油画 · 01"><img src="assets/art/oil/001.jpg" alt="油画 · 01" loading="lazy"><span class="g-no">01</span></div>
+<div class="art-group" data-g="oil"><div class="ag-head"><span class="ag-no">01</span><span class="ag-title">油画</span><span class="ag-en">OIL PAINTING</span><span class="ag-desc">学院写实 · 人物与静物</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/oil/001.jpg" data-t="油画 · 01"><img src="assets/art/oil/001.jpg" alt="油画 · 01" loading="lazy"><span class="g-no">01</span></div>
 <div class="g-item" data-src="assets/art/oil/002.jpg" data-t="油画 · 02"><img src="assets/art/oil/002.jpg" alt="油画 · 02" loading="lazy"><span class="g-no">02</span></div>
 <div class="g-item" data-src="assets/art/oil/003.jpg" data-t="油画 · 03"><img src="assets/art/oil/003.jpg" alt="油画 · 03" loading="lazy"><span class="g-no">03</span></div>
 <div class="g-item" data-src="assets/art/oil/004.jpg" data-t="油画 · 04"><img src="assets/art/oil/004.jpg" alt="油画 · 04" loading="lazy"><span class="g-no">04</span></div>
 <div class="g-item" data-src="assets/art/oil/005.jpg" data-t="油画 · 05"><img src="assets/art/oil/005.jpg" alt="油画 · 05" loading="lazy"><span class="g-no">05</span></div></div></div>
-<div class="art-group" data-g="lacquer"><div class="ag-head"><span class="ag-no">02</span><span class="ag-title">漆画</span><span class="ag-en">LACQUER ART</span><span class="ag-desc">抽象肌理 · 材料实验</span></div><div class="art-gallery "><div class="g-item" data-src="assets/art/lacquer/001.jpg" data-t="漆画 · 01"><img src="assets/art/lacquer/001.jpg" alt="漆画 · 01" loading="lazy"><span class="g-no">01</span></div>
+<div class="art-group" data-g="lacquer"><div class="ag-head"><span class="ag-no">02</span><span class="ag-title">漆画</span><span class="ag-en">LACQUER ART</span><span class="ag-desc">抽象肌理 · 材料实验</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/lacquer/001.jpg" data-t="漆画 · 01"><img src="assets/art/lacquer/001.jpg" alt="漆画 · 01" loading="lazy"><span class="g-no">01</span></div>
 <div class="g-item" data-src="assets/art/lacquer/002.jpg" data-t="漆画 · 02"><img src="assets/art/lacquer/002.jpg" alt="漆画 · 02" loading="lazy"><span class="g-no">02</span></div>
 <div class="g-item" data-src="assets/art/lacquer/003.jpg" data-t="漆画 · 03"><img src="assets/art/lacquer/003.jpg" alt="漆画 · 03" loading="lazy"><span class="g-no">03</span></div>
 <div class="g-item" data-src="assets/art/lacquer/004.jpg" data-t="漆画 · 04"><img src="assets/art/lacquer/004.jpg" alt="漆画 · 04" loading="lazy"><span class="g-no">04</span></div>
 <div class="g-item" data-src="assets/art/lacquer/005.jpg" data-t="漆画 · 05"><img src="assets/art/lacquer/005.jpg" alt="漆画 · 05" loading="lazy"><span class="g-no">05</span></div></div></div>
-<div class="art-group" data-g="sketch"><div class="ag-head"><span class="ag-no">03</span><span class="ag-title">素描</span><span class="ag-en">SKETCH</span><span class="ag-desc">造型基础 · 写实训练</span></div><div class="art-gallery "><div class="g-item" data-src="assets/art/sketch/001.jpg" data-t="素描 · 01"><img src="assets/art/sketch/001.jpg" alt="素描 · 01" loading="lazy"><span class="g-no">01</span></div>
+<div class="art-group" data-g="sketch"><div class="ag-head"><span class="ag-no">03</span><span class="ag-title">素描</span><span class="ag-en">SKETCH</span><span class="ag-desc">造型基础 · 写实训练</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/sketch/001.jpg" data-t="素描 · 01"><img src="assets/art/sketch/001.jpg" alt="素描 · 01" loading="lazy"><span class="g-no">01</span></div>
 <div class="g-item" data-src="assets/art/sketch/002.jpg" data-t="素描 · 02"><img src="assets/art/sketch/002.jpg" alt="素描 · 02" loading="lazy"><span class="g-no">02</span></div>
 <div class="g-item" data-src="assets/art/sketch/003.jpg" data-t="素描 · 03"><img src="assets/art/sketch/003.jpg" alt="素描 · 03" loading="lazy"><span class="g-no">03</span></div></div></div>
-<div class="art-group" data-g="guohua"><div class="ag-head"><span class="ag-no">04</span><span class="ag-title">国画 · 水彩</span><span class="ag-en">INK & WATERCOLOR</span><span class="ag-desc">工笔与写意</span></div><div class="art-gallery "><div class="g-item" data-src="assets/art/guohua/001.jpg" data-t="国画 · 水彩 · 01"><img src="assets/art/guohua/001.jpg" alt="国画 · 水彩 · 01" loading="lazy"><span class="g-no">01</span></div>
+<div class="art-group" data-g="guohua"><div class="ag-head"><span class="ag-no">04</span><span class="ag-title">国画 · 水彩</span><span class="ag-en">INK & WATERCOLOR</span><span class="ag-desc">工笔与写意</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/guohua/001.jpg" data-t="国画 · 水彩 · 01"><img src="assets/art/guohua/001.jpg" alt="国画 · 水彩 · 01" loading="lazy"><span class="g-no">01</span></div>
 <div class="g-item" data-src="assets/art/guohua/002.jpg" data-t="国画 · 水彩 · 02"><img src="assets/art/guohua/002.jpg" alt="国画 · 水彩 · 02" loading="lazy"><span class="g-no">02</span></div>
 <div class="g-item" data-src="assets/art/guohua/003.jpg" data-t="国画 · 水彩 · 03"><img src="assets/art/guohua/003.jpg" alt="国画 · 水彩 · 03" loading="lazy"><span class="g-no">03</span></div>
 <div class="g-item" data-src="assets/art/guohua/004.jpg" data-t="国画 · 水彩 · 04"><img src="assets/art/guohua/004.jpg" alt="国画 · 水彩 · 04" loading="lazy"><span class="g-no">04</span></div>
@@ -554,12 +500,12 @@ footer p b{color:var(--ink)}
 <div class="g-item" data-src="assets/art/guohua/007.jpg" data-t="国画 · 水彩 · 07"><img src="assets/art/guohua/007.jpg" alt="国画 · 水彩 · 07" loading="lazy"><span class="g-no">07</span></div>
 <div class="g-item" data-src="assets/art/guohua/008.jpg" data-t="国画 · 水彩 · 08"><img src="assets/art/guohua/008.jpg" alt="国画 · 水彩 · 08" loading="lazy"><span class="g-no">08</span></div>
 <div class="g-item" data-src="assets/art/guohua/009.jpg" data-t="国画 · 水彩 · 09"><img src="assets/art/guohua/009.jpg" alt="国画 · 水彩 · 09" loading="lazy"><span class="g-no">09</span></div></div></div>
-<div class="art-group" data-g="print"><div class="ag-head"><span class="ag-no">05</span><span class="ag-title">版画 · 综合材料</span><span class="ag-en">PRINT & MIXED MEDIA</span><span class="ag-desc">综合材料实验</span></div><div class="art-gallery "><div class="g-item" data-src="assets/art/print/001.jpg" data-t="版画 · 综合材料 · 01"><img src="assets/art/print/001.jpg" alt="版画 · 综合材料 · 01" loading="lazy"><span class="g-no">01</span></div>
+<div class="art-group" data-g="print"><div class="ag-head"><span class="ag-no">05</span><span class="ag-title">版画 · 综合材料</span><span class="ag-en">PRINT & MIXED MEDIA</span><span class="ag-desc">综合材料实验</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/print/001.jpg" data-t="版画 · 综合材料 · 01"><img src="assets/art/print/001.jpg" alt="版画 · 综合材料 · 01" loading="lazy"><span class="g-no">01</span></div>
 <div class="g-item" data-src="assets/art/print/002.jpg" data-t="版画 · 综合材料 · 02"><img src="assets/art/print/002.jpg" alt="版画 · 综合材料 · 02" loading="lazy"><span class="g-no">02</span></div>
 <div class="g-item" data-src="assets/art/print/003.jpg" data-t="版画 · 综合材料 · 03"><img src="assets/art/print/003.jpg" alt="版画 · 综合材料 · 03" loading="lazy"><span class="g-no">03</span></div>
 <div class="g-item" data-src="assets/art/print/004.jpg" data-t="版画 · 综合材料 · 04"><img src="assets/art/print/004.jpg" alt="版画 · 综合材料 · 04" loading="lazy"><span class="g-no">04</span></div>
 <div class="g-item" data-src="assets/art/print/005.jpg" data-t="版画 · 综合材料 · 05"><img src="assets/art/print/005.jpg" alt="版画 · 综合材料 · 05" loading="lazy"><span class="g-no">05</span></div></div></div>
-<div class="art-group" data-g="banhui"><div class="ag-head"><span class="ag-no">06</span><span class="ag-title">板绘插画</span><span class="ag-en">DIGITAL ILLUSTRATION</span><span class="ag-desc">二次元角色 · 同人创作</span></div><div class="art-gallery "><div class="g-item" data-src="assets/art/banhui/001.jpg" data-t="板绘插画 · 01"><img src="assets/art/banhui/001.jpg" alt="板绘插画 · 01" loading="lazy"><span class="g-no">01</span></div>
+<div class="art-group" data-g="banhui"><div class="ag-head"><span class="ag-no">06</span><span class="ag-title">板绘插画</span><span class="ag-en">DIGITAL ILLUSTRATION</span><span class="ag-desc">二次元角色 · 同人创作</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/banhui/001.jpg" data-t="板绘插画 · 01"><img src="assets/art/banhui/001.jpg" alt="板绘插画 · 01" loading="lazy"><span class="g-no">01</span></div>
 <div class="g-item" data-src="assets/art/banhui/002.jpg" data-t="板绘插画 · 02"><img src="assets/art/banhui/002.jpg" alt="板绘插画 · 02" loading="lazy"><span class="g-no">02</span></div>
 <div class="g-item" data-src="assets/art/banhui/003.jpg" data-t="板绘插画 · 03"><img src="assets/art/banhui/003.jpg" alt="板绘插画 · 03" loading="lazy"><span class="g-no">03</span></div>
 <div class="g-item" data-src="assets/art/banhui/004.jpg" data-t="板绘插画 · 04"><img src="assets/art/banhui/004.jpg" alt="板绘插画 · 04" loading="lazy"><span class="g-no">04</span></div>
@@ -650,12 +596,12 @@ footer p b{color:var(--ink)}
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-num">AI CINEMA 肆</div>
+        <div class="sec-num">AI CINEMA 叁</div>
         <h2 class="sec-title">AI 短剧作品<small>AI SHORT DRAMA</small></h2>
       </div>
       <div class="sec-line"></div>
     </div>
-    <p class="sec-desc">独立完成从剧本、角色资产、分镜到 AI 生成的短剧全流程。竖屏短剧为主，覆盖古装权谋、赛博仙侠、都市奇幻、末日丧尸等题材。</p>
+    <p class="sec-desc">独立完成从剧本、角色资产、分镜到 AI 生成的短剧全流程。竖屏短剧为主，覆盖古装权谋、赛博仙侠、都市奇幻、末日丧尸等题材。<br><span style="color:var(--cinnabar);font-size:12px;letter-spacing:1px">所有成片均已添加「刘彦」创作者水印，未经授权禁止转载。</span></p>
     <div class="video-grid" id="videoGrid">
       <div class="v-card" data-file="assets/videos/vid_dangjia.mp4" data-title="今天开始我当家"><div class="v-thumb"><img src="assets/videos/poster_vid_dangjia.jpg" alt="今天开始我当家" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">今天开始我当家</div><div class="v-sub"><span>AI 短剧 · 家庭 · 172 秒</span></div><span class="v-tag">古装</span></div></div>
       <div class="v-card" data-file="assets/videos/vid_quanyingwen.mp4" data-title="全英文短剧"><div class="v-thumb"><img src="assets/videos/poster_vid_quanyingwen.jpg" alt="全英文短剧" loading="lazy"><div class="v-play"></div></div><div class="v-info"><div class="v-title">全英文短剧</div><div class="v-sub"><span>AI 短剧 · 国际版 · 125 秒</span></div><span class="v-tag">海外</span></div></div>
@@ -670,12 +616,57 @@ footer p b{color:var(--ink)}
   </div>
 </section>
 
+
+<!-- ===== 学员商单 ===== -->
+<section id="student">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">STUDIO 肆</div>
+        <h2 class="sec-title">学员商单<small>STUDENT COMMERCIALS</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <p class="sec-desc">作为 AI 视频讲师，指导学员独立完成的商业项目——广告制作与数字人讲解，从需求对接到交付成片。</p>
+    <div class="video-grid" id="studentGrid">
+      <div class="v-card" data-file="assets/videos_student/ouwenqi.mp4" data-title="欧文奇 · 学员广告制作"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">欧文奇 · 学员广告制作</div><div class="v-sub"><span>学员商单 · 广告 · 65 秒</span></div><span class="v-tag">指导</span></div></div>
+      <div class="v-card" data-file="assets/videos_student/zhaochong.mp4" data-title="赵翀 · 学员数字人讲解"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">赵翀 · 学员数字人讲解</div><div class="v-sub"><span>学员商单 · 数字人 · 166 秒</span></div><span class="v-tag">指导</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 早期海外短剧 ===== -->
+<section id="overseas" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">EARLY CINEMA 伍</div>
+        <h2 class="sec-title">早期海外短剧<small>EARLY OVERSEAS DRAMA</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <p class="sec-desc">最早期的海外短剧探索作品，仅作历程展示。</p>
+    <div class="video-grid os-grid" id="overseasGrid">
+      <div class="v-card" data-file="assets/videos_overseas/overseas01.mp4" data-title="海外短剧 · 01"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 01</div><div class="v-sub"><span>早期探索 · 样片</span></div><span class="v-tag">早期</span></div></div>
+      <div class="v-card" data-file="assets/videos_overseas/overseas02.mp4" data-title="海外短剧 · 02"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 02</div><div class="v-sub"><span>早期探索 · 样片</span></div><span class="v-tag">早期</span></div></div>
+      <div class="v-card" data-file="assets/videos_overseas/overseas03.mp4" data-title="海外短剧 · 03"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 03</div><div class="v-sub"><span>早期探索 · 样片</span></div><span class="v-tag">早期</span></div></div>
+      <div class="v-card" data-file="assets/videos_overseas/overseas04.mp4" data-title="海外短剧 · 04"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 04</div><div class="v-sub"><span>早期探索 · 样片</span></div><span class="v-tag">早期</span></div></div>
+      <div class="v-card" data-file="assets/videos_overseas/overseas05.mp4" data-title="海外短剧 · 05"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 05</div><div class="v-sub"><span>早期探索 · 样片</span></div><span class="v-tag">早期</span></div></div>
+      <div class="v-card" data-file="assets/videos_overseas/overseas06.mp4" data-title="海外短剧 · 06"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 06</div><div class="v-sub"><span>早期探索 · 样片</span></div><span class="v-tag">早期</span></div></div>
+      <div class="v-card" data-file="assets/videos_overseas/overseas07.mp4" data-title="海外短剧 · 07"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 07</div><div class="v-sub"><span>早期探索 · 样片</span></div><span class="v-tag">早期</span></div></div>
+      <div class="v-card" data-file="assets/videos_overseas/overseas08.mp4" data-title="海外短剧 · 08"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 08</div><div class="v-sub"><span>早期探索 · 样片</span></div><span class="v-tag">早期</span></div></div>
+      <div class="v-card" data-file="assets/videos_overseas/overseas09.mp4" data-title="海外短剧 · 09"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 09</div><div class="v-sub"><span>早期探索 · 样片</span></div><span class="v-tag">早期</span></div></div>
+      <div class="v-card" data-file="assets/videos_overseas/overseas10.mp4" data-title="海外短剧 · 10"><div class="v-thumb noposter"><div class="v-play"></div></div><div class="v-info"><div class="v-title">海外短剧 · 10</div><div class="v-sub"><span>早期探索 · 样片</span></div><span class="v-tag">早期</span></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 剧本 ===== -->
 <section id="script" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-num">SCREENPLAY 伍</div>
+        <div class="sec-num">SCREENPLAY 陆</div>
         <h2 class="sec-title">剧本创作<small>SCREENPLAY</small></h2>
       </div>
       <div class="sec-line"></div>
@@ -690,7 +681,7 @@ footer p b{color:var(--ink)}
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-num">CHARACTER DESIGN 陆</div>
+        <div class="sec-num">CHARACTER DESIGN 柒</div>
         <h2 class="sec-title">角色与场景资产<small>ASSETS</small></h2>
       </div>
       <div class="sec-line"></div>
@@ -713,12 +704,41 @@ footer p b{color:var(--ink)}
   </div>
 </section>
 
+<!-- ===== 漫画 ===== -->
+<section id="manhua" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">WORKS 捌</div>
+        <h2 class="sec-title">漫画《魔术师的禁果》<small>FIRST MANGA</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="book-intro">
+      <div class="book-cover">
+        <span class="book-cover-tag">第一部漫画</span>
+        <img src="assets/works/jg_01.jpg" alt="《魔术师的禁果》封面">
+      </div>
+      <div class="book-info">
+        <h3>魔术师的禁果</h3>
+        <div class="pen">作者：茫氓氓莽</div>
+        <p>我的第一部漫画作品，共 27 页。在分镜、黑白关系与叙事节奏上完成了从插画到漫画的跨越。</p>
+        <div class="book-meta">
+          <span><b>27</b>页</span>
+          <span><b>1</b>部</span>
+          <span><b>2025</b>年</span>
+        </div>
+      </div>
+    </div>
+    <div class="album-entry"><img src="assets/works/jg_01.jpg" alt="《魔术师的禁果》封面"><div class="album-mask"><div class="album-btn">进入相册 · 共 27 页</div></div><div class="album-cap">《魔术师的禁果》 · 完整相册</div></div>
+  </div>
+</section>
 <!-- ===== 技艺 ===== -->
 <section id="craft" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-num">CRAFTS 柒</div>
+        <div class="sec-num">CRAFTS 玖</div>
         <h2 class="sec-title">技艺矩阵<small>SKILLS</small></h2>
       </div>
       <div class="sec-line"></div>
@@ -769,7 +789,7 @@ footer p b{color:var(--ink)}
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-num">PATH 捌</div>
+        <div class="sec-num">PATH 拾</div>
         <h2 class="sec-title">成长轨迹<small>JOURNEY</small></h2>
       </div>
       <div class="sec-line"></div>
@@ -829,6 +849,19 @@ footer p b{color:var(--ink)}
   </div>
 </div>
 
+
+<!-- ===== 相册灯箱 ===== -->
+<div class="lightbox" id="albumLightbox">
+  <div class="lb-inner">
+    <button class="lb-close" id="albumClose">×</button>
+    <button class="lb-nav lb-prev" id="albumPrev">‹</button>
+    <img id="albumImg" src="" alt="">
+    <button class="lb-nav lb-next" id="albumNext">›</button>
+    <div class="lb-title" id="albumTitle"></div>
+    <div class="lb-page" id="albumPage"></div>
+  </div>
+</div>
+
 <!-- ===== 视频灯箱 ===== -->
 <div class="lightbox" id="videoLightbox">
   <div class="lb-inner">
@@ -861,9 +894,9 @@ footer p b{color:var(--ink)}
     player.src=file;t.textContent=title;lb.classList.add('open');document.body.style.overflow='hidden';
     player.play().catch(function(){});
   }
-  g.addEventListener('click',function(e){
+  document.addEventListener('click',function(e){
     var card=e.target.closest('.v-card');
-    if(card) openVideo(card.dataset.file,card.dataset.title);
+    if(card && card.dataset.file) openVideo(card.dataset.file,card.dataset.title);
   });
   function closeVideo(){lb.classList.remove('open');player.pause();player.removeAttribute('src');player.load();document.body.style.overflow='';}
   document.getElementById('videoClose').addEventListener('click',closeVideo);
@@ -904,7 +937,7 @@ footer p b{color:var(--ink)}
   var ROLES={
     all:{t:'全能视觉创作者',mark:'全',
       d:'美术学根基 × 数字创作 × AI 全流程。从架上绘画到 AI 短剧，一个人就是一条完整的视觉生产线。',
-      to:'作品导览：插画集 → 漫画 → 美术作品 → AI 短剧 → 剧本 → 角色资产', cats:null},
+      to:'作品导览：插画集 → 美术作品 → AI 短剧 → 学员商单 → 海外短剧 → 剧本 → 角色资产', cats:null},
     illustrator:{t:'插画师 · 原画师',mark:'绘',
       d:'二次元角色设计、漫画分镜与叙事、IP 卡牌。板绘 18 幅 + 插画集 32 页 + 漫画 27 页 + 角色卡牌设计，从纸面到屏幕的角色叙事能力。',
       to:'重点作品：板绘插画 → 《相逢之时》插画集 → 《魔术师的禁果》漫画 → 页面·卡牌设计', cats:['banhui','card']},
@@ -912,7 +945,7 @@ footer p b{color:var(--ink)}
       d:'Foenor 亚马逊 A+ 全案、主图详情、包装与页面设计。懂产品、懂转化、懂品牌调性的商业视觉，中英双语交付。',
       to:'重点作品：电商视觉 · A+（34 件）→ 页面·卡牌设计 → 角色资产 → 板绘插画', cats:['amazon','card']},
     aigc:{t:'AI 短剧导演 · AIGC 创作者',mark:'导',
-      d:'剧本 — 角色资产 — 分镜 — AI 生成 — 成片全流程。9+ 部样片、11 份剧本，覆盖古装权谋 / 赛博仙侠 / 都市奇幻 / 末日丧尸。',
+      d:'剧本 — 角色资产 — 分镜 — AI 生成 — 成片全流程。9+ 部样片 + 10 部早期海外短剧 + 11 份剧本，并指导学员产出商单作品。',
       to:'重点作品：AI 短剧 9 部 → 剧本创作 11 份 → 角色与场景资产', cats:null},
     fineart:{t:'美术师 · 美育讲师',mark:'美',
       d:'油画、漆画、国画水彩、版画综合、素描——完整学院派造型训练，兼具展览级作品与 AI 视频学员指导经验。',
@@ -958,6 +991,56 @@ footer p b{color:var(--ink)}
       lb.classList.add('open');document.body.style.overflow='hidden';
     });
   });
+})();
+
+
+/* ===== 相册 ===== */
+(function(){
+  var XF=['assets/works/xf_01.jpg','assets/works/xf_02.jpg','assets/works/xf_03.jpg','assets/works/xf_04.jpg','assets/works/xf_05.jpg','assets/works/xf_06.jpg','assets/works/xf_07.jpg','assets/works/xf_08.jpg','assets/works/xf_09.jpg','assets/works/xf_10.jpg','assets/works/xf_11.jpg','assets/works/xf_12.jpg','assets/works/xf_13.jpg','assets/works/xf_14.jpg','assets/works/xf_15.jpg','assets/works/xf_16.jpg','assets/works/xf_17.jpg','assets/works/xf_18.jpg','assets/works/xf_19.jpg','assets/works/xf_20.jpg','assets/works/xf_21.jpg','assets/works/xf_22.jpg','assets/works/xf_23.jpg','assets/works/xf_24.jpg','assets/works/xf_25.jpg','assets/works/xf_26.jpg','assets/works/xf_27.jpg','assets/works/xf_28.jpg','assets/works/xf_29.jpg','assets/works/xf_30.jpg','assets/works/xf_31.jpg','assets/works/xf_32.jpg'];
+  var JG=['assets/works/jg_01.jpg','assets/works/jg_02.jpg','assets/works/jg_03.jpg','assets/works/jg_04.jpg','assets/works/jg_05.jpg','assets/works/jg_06.jpg','assets/works/jg_07.jpg','assets/works/jg_08.jpg','assets/works/jg_09.jpg','assets/works/jg_10.jpg','assets/works/jg_11.jpg','assets/works/jg_12.jpg','assets/works/jg_13.jpg','assets/works/jg_14.jpg','assets/works/jg_15.jpg','assets/works/jg_16.jpg','assets/works/jg_17.jpg','assets/works/jg_18.jpg','assets/works/jg_19.jpg','assets/works/jg_20.jpg','assets/works/jg_21.jpg','assets/works/jg_22.jpg','assets/works/jg_23.jpg','assets/works/jg_24.jpg','assets/works/jg_25.jpg','assets/works/jg_26.jpg','assets/works/jg_27.jpg'];
+  var lb=document.getElementById('albumLightbox'), img=document.getElementById('albumImg'),
+      t=document.getElementById('albumTitle'), pg=document.getElementById('albumPage');
+  var cur=null, idx=0;
+  function openAlbum(kind){
+    cur = kind==='xf' ? XF : JG;
+    idx = 0;
+    show();
+    lb.classList.add('open');document.body.style.overflow='hidden';
+  }
+  function show(){
+    img.src=cur[idx];
+    t.textContent = (cur===XF?'《相逢之时》 · 第 ':'《魔术师的禁果》 · 第 ') + (idx+1) + ' 页';
+    pg.textContent = (idx+1) + ' / ' + cur.length;
+  }
+  function step(d){ idx=(idx+d+cur.length)%cur.length; show(); }
+  document.querySelectorAll('.album-entry').forEach(function(el,i){
+    el.addEventListener('click',function(){ openAlbum(i===0?'xf':'jg'); });
+  });
+  document.getElementById('albumClose').addEventListener('click',function(){lb.classList.remove('open');document.body.style.overflow='';});
+  document.getElementById('albumPrev').addEventListener('click',function(e){e.stopPropagation();if(cur)step(-1);});
+  document.getElementById('albumNext').addEventListener('click',function(e){e.stopPropagation();if(cur)step(1);});
+  lb.addEventListener('click',function(e){if(e.target===lb){lb.classList.remove('open');document.body.style.overflow='';}});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open')||!cur)return;
+    if(e.key==='ArrowLeft')step(-1);
+    if(e.key==='ArrowRight')step(1);
+    if(e.key==='Escape'){lb.classList.remove('open');document.body.style.overflow='';}
+  });
+  window.__openAlbum=openAlbum;
+})();
+
+/* ===== 横图比例修复 ===== */
+(function(){
+  function fix(img){
+    if(img.complete){
+      if(img.naturalWidth>img.naturalHeight) img.closest('.g-item').classList.add('wide');
+    }else{
+      img.addEventListener('load',function(){
+        if(img.naturalWidth>img.naturalHeight) img.closest('.g-item').classList.add('wide');
+      });
+    }
+  }
+  document.querySelectorAll('.art-gallery img').forEach(fix);
 })();
 
 /* ===== 移动导航 ===== */
