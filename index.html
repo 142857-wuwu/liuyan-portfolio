@@ -347,6 +347,74 @@ footer p b{color:var(--ink)}
   .art-gallery{grid-template-columns:repeat(2,1fr)}
 }
 
+
+/* ===== v4.3 首页 ===== */
+.hero-layer{display:inline-block;margin-top:16px;padding:4px 14px;border:1px solid var(--cinnabar);color:var(--cinnabar);font-size:12px;letter-spacing:3px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hbtn{display:inline-block;padding:12px 26px;font-size:13px;letter-spacing:2px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;transition:all .3s;background:transparent}
+.hbtn.on{background:var(--cinnabar);border-color:var(--cinnabar);color:var(--white)}
+.hbtn:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.hero-memo{margin-top:24px;font-size:12.5px;color:var(--ink-2);letter-spacing:1.5px;border-left:2px solid var(--cinnabar);padding-left:12px;line-height:1.9}
+.hero-memo b{color:var(--cinnabar);font-weight:700}
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.cap-card{border:1px solid var(--line);background:var(--white);padding:30px 26px;position:relative;transition:transform .3s,box-shadow .3s}
+.cap-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(43,40,35,.12)}
+.cap-no{font-size:11px;color:var(--cinnabar);letter-spacing:3px}
+.cap-card h3{font-size:19px;font-weight:900;letter-spacing:2px;margin-top:10px}
+.cap-flow{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.cap-flow span{border:1px solid var(--line);padding:4px 10px;font-size:11.5px;color:var(--ink-2);letter-spacing:1px}
+.cap-fit{margin-top:16px;font-size:12px;color:var(--ink-2);line-height:2}
+.cap-fit b{color:var(--ink)}
+.feat-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px}
+.feat-card{border:1px solid var(--line);background:var(--white);display:grid;grid-template-columns:280px 1fr;transition:transform .3s,box-shadow .3s;overflow:hidden}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(43,40,35,.13)}
+.feat-media{position:relative;width:280px;height:330px;background:var(--paper-2);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.feat-media img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+.feat-media.video .f-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,18,14,.28);transition:background .3s;cursor:pointer}
+.feat-media.video:hover .f-play{background:rgba(20,18,14,.06)}
+.f-play-ico{width:56px;height:56px;border:1px solid rgba(255,255,255,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;background:rgba(166,58,46,.6)}
+.feat-sub{position:absolute;left:0;right:0;bottom:0;background:rgba(244,241,234,.94);padding:6px 14px;font-size:11px;color:var(--ink-2);letter-spacing:1px;text-align:center;border-top:1px solid var(--line)}
+.feat-body{padding:26px 28px;display:flex;flex-direction:column;justify-content:center}
+.feat-tag{font-size:11px;color:var(--cinnabar);letter-spacing:2px}
+.feat-body h3{font-size:21px;font-weight:900;letter-spacing:2px;margin-top:8px}
+.feat-type{margin-top:6px;font-size:12px;color:var(--ink-2);letter-spacing:1px}
+.feat-work{margin-top:14px;font-size:12.5px;color:var(--ink)}
+.feat-work b{color:var(--cinnabar);font-weight:700;margin-right:4px}
+.feat-hl{margin-top:10px;font-size:12.5px;color:var(--ink-2);line-height:1.8;border-left:2px solid var(--line);padding-left:10px}
+.feat-chain{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.feat-chain span{border:1px solid var(--cinnabar);color:var(--cinnabar);font-size:11px;padding:3px 12px;letter-spacing:2px}
+.feat-chain span+span::before{content:"→";margin-right:8px;color:var(--cinnabar)}
+.feat-all{margin-top:30px;text-align:center}
+.flow30{display:flex;align-items:stretch;flex-wrap:wrap;margin-top:36px}
+.f30-item{flex:1;min-width:150px;position:relative;padding:24px 18px;border:1px solid var(--line);background:var(--white);text-align:center}
+.f30-item+.f30-item{border-left:none}
+.f30-no{font-size:10px;color:var(--cinnabar);letter-spacing:3px}
+.f30-t{font-size:14px;font-weight:700;letter-spacing:1px;margin-top:10px;line-height:1.7}
+.f30-arr{position:absolute;right:-13px;top:50%;transform:translateY(-50%);z-index:2;color:var(--cinnabar);font-size:15px;background:var(--paper);padding:2px}
+.f30-memo{margin-top:26px;text-align:center;font-size:13px;color:var(--ink-2);letter-spacing:1.5px}
+.f30-memo b{color:var(--cinnabar)}
+.about-wrap{display:grid;grid-template-columns:280px 1fr;gap:46px;align-items:start}
+.about-txt p{color:var(--ink-2);font-size:14px;line-height:2.1;margin-top:14px}
+.about-txt p:first-child{margin-top:0}
+.about-seek{margin-top:22px;border-top:1px solid var(--line);padding-top:18px;font-size:13.5px;letter-spacing:1px;color:var(--ink)}
+.about-seek b{color:var(--cinnabar);font-weight:900}
+.v-work{margin-top:10px;font-size:12px;color:var(--ink);line-height:1.7}
+.v-work b{color:var(--cinnabar);font-weight:700;margin-right:4px}
+.v-chain{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.v-chain span{border:1px solid var(--line);color:var(--ink-2);font-size:10.5px;padding:2px 9px;letter-spacing:1.5px}
+@media(max-width:1024px){
+  .cap-grid{grid-template-columns:1fr}
+  .feat-card{grid-template-columns:1fr}
+  .feat-media{width:100%;height:300px}
+  .about-wrap{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .feat-grid{grid-template-columns:1fr}
+  .f30-item{min-width:46%}
+  .f30-item:nth-child(odd){border-right:1px solid var(--line)}
+  .f30-arr{display:none}
+}
 </style>
 </head>
 <body>
@@ -359,15 +427,13 @@ footer p b{color:var(--ink)}
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="菜单"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#huaji">插画集</a></li>
-      <li><a href="#artgallery">美术作品</a></li>
+      <li><a href="#featured">代表作品</a></li>
+      <li><a href="#capability">能力</a></li>
       <li><a href="#video">AI 短剧</a></li>
-      <li><a href="#student">学员商单</a></li>
-      <li><a href="#overseas">海外短剧</a></li>
+      <li><a href="#artgallery">美术作品</a></li>
       <li><a href="#script">剧本</a></li>
       <li><a href="#asset">角色资产</a></li>
-      <li><a href="#manhua">漫画</a></li>
-      <li><a href="#jingli">经历</a></li>
+      <li><a href="#about">关于我</a></li>
       <li><a href="#contact">联系</a></li>
     </ul>
   </div>
@@ -379,26 +445,217 @@ footer p b{color:var(--ink)}
 <header class="hero" id="home">
   <div class="wrap hero-inner">
     <div class="hero-text">
-      <h1>刘彦<em>·</em><br>视觉创作者<br>AI 短剧导演</h1>
-      <div class="hero-sub">ART · ILLUSTRATION · AI DRAMA</div>
-      <p class="hero-desc">美术学出身，从手绘插画与漫画走向 AI 短剧全流程创作——角色设计、剧本、分镜、生成到成片，一个人就是一条完整的视觉生产线。</p>
-      <div class="hero-tags">
-        <span>插画 · 漫画</span>
-        <span>AI 视频生成</span>
-        <span>短剧剧本</span>
-        <span>角色 / 场景资产</span>
-        <span>电商视觉</span>
+      <h1>刘彦<em>·</em><br>AI 视觉创作者</h1>
+      <div class="hero-layer">AI 短剧 / AI 影视视觉创作者</div>
+      <div class="hero-sub">角色设计 · 场景设计 · 视觉开发 · 分镜 · AI 视频</div>
+      <p class="hero-desc">从一张角色设定，到一支完整短片。<br>美术科班背景，具备插画、漫画、角色与场景设计、剧本分镜及 AI 视频全流程制作能力。</p>
+      <div class="hero-btns">
+        <a class="hbtn on" href="#featured">查看代表作品</a>
+        <a class="hbtn" href="#capability">查看完整能力</a>
+        <a class="hbtn" href="#contact">联系我</a>
       </div>
+      <div class="hero-memo">我不是只负责“生成”，而是负责让画面最终成立。<br><b>美术科班出身，不止生成图片。</b></div>
     </div>
     <div class="hero-visual">
       <div class="hero-frame">
-        <img src="assets/works/xf_01.jpg" alt="《相逢之时》封面">
+        <img src="assets/videos/poster_vid_gongzhu.jpg" alt="《公主只想苟》AI 短剧定帧">
       </div>
-      <div class="hero-caption">《相逢之时》插画集 · 第 01 页</div>
+      <div class="hero-caption">《公主只想苟》AI 短剧 · 定帧</div>
       <div class="scroll-hint">SCROLL</div>
     </div>
   </div>
 </header>
+
+<!-- ===== 我能为团队完成什么 ===== -->
+<section id="capability">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">CAPABILITY 零</div>
+        <h2 class="sec-title">我能为团队完成什么<small>WHAT I DELIVER</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="cap-grid">
+      <div class="cap-card">
+        <div class="cap-no">01</div>
+        <h3>角色与视觉开发</h3>
+        <div class="cap-flow"><span>角色设定</span><span>三视图</span><span>服装</span><span>人物资产</span><span>镜头应用</span></div>
+        <div class="cap-fit">适合：<b>游戏 / 漫剧 / 短剧 / 动画 / IP / AI 内容</b></div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-no">02</div>
+        <h3>场景与镜头设计</h3>
+        <div class="cap-flow"><span>场景设计</span><span>构图</span><span>氛围</span><span>分镜</span><span>镜头生成</span></div>
+        <div class="cap-fit">能够把<b>静态视觉继续推进到动态叙事</b>。</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-no">03</div>
+        <h3>AI 视频全流程</h3>
+        <div class="cap-flow"><span>剧本</span><span>分镜</span><span>角色资产</span><span>场景资产</span><span>AI 生成</span><span>剪辑</span><span>成片</span></div>
+        <div class="cap-fit">从创意到成片<b>一条线走完</b>，不是只会点某个生成工具。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 精选项目 ===== -->
+<section id="featured" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="feat-head">
+      <div class="sec-head" style="flex:1;border:none">
+        <div>
+          <div class="sec-num">FEATURED 精选</div>
+          <h2 class="sec-title">代表作品<small>SELECTED WORKS</small></h2>
+        </div>
+      </div>
+      <p class="sec-desc" style="max-width:380px;margin:0 0 8px">六条主线，从角色到成片——每一件都证明我能把视觉能力贯穿到完整内容生产流程。</p>
+    </div>
+    <div class="feat-grid">
+
+      <div class="feat-card">
+        <div class="feat-media video" data-file="assets/videos/vid_youse_full.mp4" data-title="釉色里的暗纹 · 完整版">
+          <img src="assets/videos/poster_vid_youse_full.jpg" alt="釉色里的暗纹完整版" loading="lazy">
+          <div class="f-play"><div class="f-play-ico">▶</div></div>
+          <div class="feat-sub">AI 短剧 · 完整成片 · 241s</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-tag">最强 AI 短剧 · 完整成片</div>
+          <h3>《釉色里的暗纹》完整版</h3>
+          <div class="feat-type">AI 短剧｜剧情｜241s</div>
+          <div class="feat-work"><b>我的工作：</b>剧本 / 分镜 / 角色资产 / AI 生成 / 剪辑 / 成片</div>
+          <div class="feat-hl">项目亮点：从剧本到成片全流程独立完成，分镜、角色资产与最终镜头一致落地。</div>
+          <div class="feat-chain"><span>剧本</span><span>角色</span><span>场景</span><span>分镜</span><span>成片</span></div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-media">
+          <img src="assets/works/ai_char_zhunv.png" alt="角色视觉开发" loading="lazy">
+          <div class="feat-sub">女主三视图 · 常服 · 将军战袍</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-tag">角色视觉开发</div>
+          <h3>角色设定 → 资产 → 镜头</h3>
+          <div class="feat-type">三视图 · 服装 · 人物资产</div>
+          <div class="feat-work"><b>我的工作：</b>角色设定 / 三视图 / 服装设计 / 人物资产</div>
+          <div class="feat-hl">项目亮点：从文字设定建立角色资产，保障跨镜头一致性，直接用于 AI 生成。</div>
+          <div class="feat-chain"><span>设定</span><span>三视图</span><span>服装</span><span>资产</span><span>镜头</span></div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-media">
+          <img src="assets/works/ai_scene_chaotang.png" alt="场景视觉开发" loading="lazy">
+          <div class="feat-sub">朝堂 · 战场 · 御花园</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-tag">场景视觉开发</div>
+          <h3>场景设计 → 氛围 → 分镜</h3>
+          <div class="feat-type">场景 · 构图 · 氛围</div>
+          <div class="feat-work"><b>我的工作：</b>场景设计 / 构图 / 氛围 / 分镜 / 镜头生成</div>
+          <div class="feat-hl">项目亮点：把静态场景视觉推进到动态镜头叙事，建立统一的视觉世界观。</div>
+          <div class="feat-chain"><span>场景</span><span>构图</span><span>氛围</span><span>分镜</span><span>生成</span></div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-media video" data-file="assets/videos/vid_gongzhu.mp4" data-title="公主只想苟">
+          <img src="assets/videos/poster_vid_gongzhu.jpg" alt="公主只想苟" loading="lazy">
+          <div class="f-play"><div class="f-play-ico">▶</div></div>
+          <div class="feat-sub">AI 短剧 · 权谋成长 · 318s</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-tag">完整短剧项目</div>
+          <h3>《公主只想苟》</h3>
+          <div class="feat-type">AI 短剧｜权谋成长｜318s</div>
+          <div class="feat-work"><b>我的工作：</b>剧本 / 角色设计 / 场景设计 / 分镜 / AI 生成 / 剪辑</div>
+          <div class="feat-hl">项目亮点：从文字设定开始建立角色与场景资产，并完成完整镜头制作与成片。</div>
+          <div class="feat-chain"><span>剧本</span><span>角色</span><span>场景</span><span>分镜</span><span>成片</span></div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-media">
+          <img src="assets/art/amazon/001.jpg" alt="电商视觉 A+" loading="lazy">
+          <div class="feat-sub">17 Air / 马年 PM 亚马逊 A+ 全案</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-tag">商业视觉 · A+</div>
+          <h3>电商视觉全案</h3>
+          <div class="feat-type">亚马逊 A+ 全案 · 34 件 · 中英双语</div>
+          <div class="feat-work"><b>我的工作：</b>需求理解 / 主图 / 详情页 / A+ 模块 / 包装</div>
+          <div class="feat-hl">项目亮点：不只是艺术创作，能完成面向转化的商业视觉需求。</div>
+          <div class="feat-chain"><span>需求</span><span>主图</span><span>详情</span><span>A+</span><span>交付</span></div>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-media">
+          <img src="assets/art/oil/001.jpg" alt="传统美术" loading="lazy">
+          <div class="feat-sub">油画 · 漆画 · 素描 · 国画 · 版画 · 板绘</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-tag">传统美术功底</div>
+          <h3>美术学 · 学院派造型</h3>
+          <div class="feat-type">油画 / 漆画 / 素描 / 国画 / 版画 / 板绘</div>
+          <div class="feat-work"><b>我的工作：</b>造型 / 构图 / 色彩 / 光影 / 创作表达</div>
+          <div class="feat-hl">项目亮点：完整学院派美术训练，AI 时代的视觉判断力来源。</div>
+          <div class="feat-chain"><span>造型</span><span>素描</span><span>油画</span><span>国画</span><span>版画</span></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="feat-all"><a class="hbtn on" href="#artgallery">查看全部作品 →</a></div>
+  </div>
+</section>
+
+<!-- ===== 30秒认识我 ===== -->
+<section id="me30">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">30 SEC 认识我</div>
+        <h2 class="sec-title">从美术底子，到完整成片<small>MY PRODUCTION LINE</small></h2>
+      </div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="flow30">
+      <div class="f30-item"><div class="f30-no">01</div><div class="f30-t">美术学背景</div></div>
+      <div class="f30-arr">→</div>
+      <div class="f30-item"><div class="f30-no">02</div><div class="f30-t">插画 / 漫画 / 商业视觉</div></div>
+      <div class="f30-arr">→</div>
+      <div class="f30-item"><div class="f30-no">03</div><div class="f30-t">角色 &amp; 场景设计</div></div>
+      <div class="f30-arr">→</div>
+      <div class="f30-item"><div class="f30-no">04</div><div class="f30-t">剧本 &amp; 分镜</div></div>
+      <div class="f30-arr">→</div>
+      <div class="f30-item"><div class="f30-no">05</div><div class="f30-t">AI 视频生成</div></div>
+      <div class="f30-arr">→</div>
+      <div class="f30-item"><div class="f30-no">06</div><div class="f30-t">完整短片</div></div>
+    </div>
+    <div class="f30-memo">我的优势不是某一个 AI 工具，而是能够把<b>视觉能力贯穿到完整内容生产流程</b>。</div>
+  </div>
+</section>
+
+<!-- ===== 关于我 ===== -->
+<section id="about" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="about-wrap">
+      <div class="about-seal">
+        <div class="seal" style="width:130px;height:130px;font-size:56px">刘</div>
+        <div style="margin-top:20px;font-size:12px;color:var(--ink-2);letter-spacing:2px;line-height:2">AI 视觉创作者<br>角色设计 · 场景设计 · 视觉开发 · 分镜 · AI 视频</div>
+      </div>
+      <div class="about-txt">
+        <div class="sec-num">ABOUT 关于我</div>
+        <h2 class="sec-title" style="font-size:26px">刘彦<small>LIU YAN</small></h2>
+        <p>我从传统美术进入数字视觉，又从插画与漫画进入 AI 内容创作。</p>
+        <p>我喜欢解决的不是“怎么生成一张好看的图”，而是一个视觉想法如何真正落地。从角色设定、场景设计，到剧本、分镜、AI 生成与后期成片，我能够参与并完成完整视觉制作流程。</p>
+        <p>我的美术训练让我关注造型、构图、色彩与光影；AI 工具则让我能够快速把这些视觉判断转化成动态内容。我希望加入一个能够让我持续做视觉、持续积累专业能力的团队。</p>
+        <div class="about-seek">正在寻找：<b>AI 视觉 / 视觉设计 / 角色与场景 / AI 内容制作</b> 相关岗位。</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===== 岗位视角 ===== -->
 <section id="role">
@@ -408,18 +665,18 @@ footer p b{color:var(--ink)}
       <h2>选择你关心的岗位方向</h2>
       <div class="role-sub">HR 可按岗位快速定位对应作品与能力 — 也可切换「全能」查看完整创作版图</div>
       <div class="role-tabs" id="roleTabs">
-        <button class="role-tab on" data-role="all">全能视觉创作者<small>ALL-ROUND</small></button>
+        <button class="role-tab on" data-role="all">AI 视觉创作者<small>AI VISUAL</small></button>
         <button class="role-tab" data-role="illustrator">插画师 · 原画师<small>ILLUSTRATOR</small></button>
         <button class="role-tab" data-role="ecommerce">电商视觉设计师<small>E-COMMERCE</small></button>
         <button class="role-tab" data-role="aigc">AI 短剧导演 · AIGC<small>AI DRAMA</small></button>
         <button class="role-tab" data-role="fineart">美术师 · 美育讲师<small>FINE ART</small></button>
       </div>
       <div class="role-desc" id="roleDesc">
-        <div class="rd-mark">全</div>
+        <div class="rd-mark">AI</div>
         <div>
-          <div class="rd-title" id="rdTitle">全能视觉创作者</div>
-          <div class="rd-text" id="rdText">美术学根基 × 数字创作 × AI 全流程。从架上绘画到 AI 短剧，一个人就是一条完整的视觉生产线。</div>
-          <div class="rd-to" id="rdTo">作品导览：插画集 → 漫画 → 美术作品 → AI 短剧 → 剧本 → 角色资产</div>
+          <div class="rd-title" id="rdTitle">AI 视觉创作者</div>
+          <div class="rd-text" id="rdText">美术科班出身，不止生成图片。擅长把一个创意，从角色与场景设计，推进到分镜、AI 生成与最终成片。</div>
+          <div class="rd-to" id="rdTo">导览：代表作品 → 角色·场景资产 → AI 短剧 → 美术作品 → 剧本 → 商业视觉</div>
         </div>
       </div>
     </div>
@@ -472,7 +729,7 @@ footer p b{color:var(--ink)}
     </div>
     <p class="sec-desc">美术学专业训练的架上作品，与面向市场的商业视觉——油画、漆画、素描、国画水彩、版画综合、板绘插画、亚马逊 A+、页面与周边设计，共 112 件。</p>
     <div class="art-filter" id="artFilter"><button class="af on" data-cat="all">全部 112</button><button class="af" data-cat="oil">油画 8</button><button class="af" data-cat="lacquer">漆画 5</button><button class="af" data-cat="sketch">素描 3</button><button class="af" data-cat="guohua">国画·水彩 10</button><button class="af" data-cat="print">版画·综合 5</button><button class="af" data-cat="banhui">板绘 20</button><button class="af" data-cat="amazon">电商 A+ 34</button><button class="af" data-cat="card">页面·周边 27</button></div>
-    <div id="artGroups"><div class="art-group" data-g="oil"><div class="ag-head"><span class="ag-no">01</span><span class="ag-title">油画</span><span class="ag-en">OIL PAINTING</span><span class="ag-desc">学院写实 · 人物与静物</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/oil/001.jpg" data-t="油画 · 01"><img src="assets/art/oil/001.jpg" alt="油画 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/oil/002.jpg" data-t="油画 · 02"><img src="assets/art/oil/002.jpg" alt="油画 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/oil/003.jpg" data-t="油画 · 03"><img src="assets/art/oil/003.jpg" alt="油画 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/oil/004.jpg" data-t="油画 · 04"><img src="assets/art/oil/004.jpg" alt="油画 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/oil/005.jpg" data-t="油画 · 05"><img src="assets/art/oil/005.jpg" alt="油画 · 05" loading="lazy"><span class="g-no">05</span></div><div class="g-item" data-src="assets/art/oil/006.jpg" data-t="油画 · 06"><img src="assets/art/oil/006.jpg" alt="油画 · 06" loading="lazy"><span class="g-no">06</span></div><div class="g-item" data-src="assets/art/oil/007.jpg" data-t="油画 · 07"><img src="assets/art/oil/007.jpg" alt="油画 · 07" loading="lazy"><span class="g-no">07</span></div><div class="g-item" data-src="assets/art/oil/008.jpg" data-t="油画 · 08"><img src="assets/art/oil/008.jpg" alt="油画 · 08" loading="lazy"><span class="g-no">08</span></div></div></div><div class="art-group" data-g="lacquer"><div class="ag-head"><span class="ag-no">02</span><span class="ag-title">漆画</span><span class="ag-en">LACQUER ART</span><span class="ag-desc">抽象肌理 · 材料实验</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/lacquer/001.jpg" data-t="漆画 · 01"><img src="assets/art/lacquer/001.jpg" alt="漆画 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/lacquer/002.jpg" data-t="漆画 · 02"><img src="assets/art/lacquer/002.jpg" alt="漆画 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/lacquer/003.jpg" data-t="漆画 · 03"><img src="assets/art/lacquer/003.jpg" alt="漆画 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/lacquer/004.jpg" data-t="漆画 · 04"><img src="assets/art/lacquer/004.jpg" alt="漆画 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/lacquer/005.jpg" data-t="漆画 · 05"><img src="assets/art/lacquer/005.jpg" alt="漆画 · 05" loading="lazy"><span class="g-no">05</span></div></div></div><div class="art-group" data-g="sketch"><div class="ag-head"><span class="ag-no">03</span><span class="ag-title">素描</span><span class="ag-en">SKETCH</span><span class="ag-desc">造型基础 · 写实训练</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/sketch/001.jpg" data-t="素描 · 01"><img src="assets/art/sketch/001.jpg" alt="素描 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/sketch/002.jpg" data-t="素描 · 02"><img src="assets/art/sketch/002.jpg" alt="素描 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/sketch/003.jpg" data-t="素描 · 03"><img src="assets/art/sketch/003.jpg" alt="素描 · 03" loading="lazy"><span class="g-no">03</span></div></div></div><div class="art-group" data-g="guohua"><div class="ag-head"><span class="ag-no">04</span><span class="ag-title">国画 · 水彩</span><span class="ag-en">INK & WATERCOLOR</span><span class="ag-desc">工笔 · 写意 · 水彩</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/guohua/001.jpg" data-t="国画 · 水彩 · 01"><img src="assets/art/guohua/001.jpg" alt="国画 · 水彩 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/guohua/002.jpg" data-t="国画 · 水彩 · 02"><img src="assets/art/guohua/002.jpg" alt="国画 · 水彩 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/guohua/003.jpg" data-t="国画 · 水彩 · 03"><img src="assets/art/guohua/003.jpg" alt="国画 · 水彩 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/guohua/004.jpg" data-t="国画 · 水彩 · 04"><img src="assets/art/guohua/004.jpg" alt="国画 · 水彩 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/guohua/005.jpg" data-t="国画 · 水彩 · 05"><img src="assets/art/guohua/005.jpg" alt="国画 · 水彩 · 05" loading="lazy"><span class="g-no">05</span></div><div class="g-item" data-src="assets/art/guohua/006.jpg" data-t="国画 · 水彩 · 06"><img src="assets/art/guohua/006.jpg" alt="国画 · 水彩 · 06" loading="lazy"><span class="g-no">06</span></div><div class="g-item" data-src="assets/art/guohua/007.jpg" data-t="国画 · 水彩 · 07"><img src="assets/art/guohua/007.jpg" alt="国画 · 水彩 · 07" loading="lazy"><span class="g-no">07</span></div><div class="g-item" data-src="assets/art/guohua/008.jpg" data-t="国画 · 水彩 · 08"><img src="assets/art/guohua/008.jpg" alt="国画 · 水彩 · 08" loading="lazy"><span class="g-no">08</span></div><div class="g-item" data-src="assets/art/guohua/009.jpg" data-t="国画 · 水彩 · 09"><img src="assets/art/guohua/009.jpg" alt="国画 · 水彩 · 09" loading="lazy"><span class="g-no">09</span></div><div class="g-item" data-src="assets/art/guohua/010.jpg" data-t="国画 · 水彩 · 10"><img src="assets/art/guohua/010.jpg" alt="国画 · 水彩 · 10" loading="lazy"><span class="g-no">10</span></div></div></div><div class="art-group" data-g="print"><div class="ag-head"><span class="ag-no">05</span><span class="ag-title">版画 · 综合材料</span><span class="ag-en">PRINT & MIXED MEDIA</span><span class="ag-desc">综合材料实验</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/print/001.jpg" data-t="版画 · 综合材料 · 01"><img src="assets/art/print/001.jpg" alt="版画 · 综合材料 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/print/002.jpg" data-t="版画 · 综合材料 · 02"><img src="assets/art/print/002.jpg" alt="版画 · 综合材料 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/print/003.jpg" data-t="版画 · 综合材料 · 03"><img src="assets/art/print/003.jpg" alt="版画 · 综合材料 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/print/004.jpg" data-t="版画 · 综合材料 · 04"><img src="assets/art/print/004.jpg" alt="版画 · 综合材料 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/print/005.jpg" data-t="版画 · 综合材料 · 05"><img src="assets/art/print/005.jpg" alt="版画 · 综合材料 · 05" loading="lazy"><span class="g-no">05</span></div></div></div><div class="art-group" data-g="banhui"><div class="ag-head"><span class="ag-no">06</span><span class="ag-title">板绘插画</span><span class="ag-en">DIGITAL ILLUSTRATION</span><span class="ag-desc">二次元角色 · 同人创作</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/banhui/001.jpg" data-t="板绘插画 · 01"><img src="assets/art/banhui/001.jpg" alt="板绘插画 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/banhui/002.jpg" data-t="板绘插画 · 02"><img src="assets/art/banhui/002.jpg" alt="板绘插画 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/banhui/003.jpg" data-t="板绘插画 · 03"><img src="assets/art/banhui/003.jpg" alt="板绘插画 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/banhui/004.jpg" data-t="板绘插画 · 04"><img src="assets/art/banhui/004.jpg" alt="板绘插画 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/banhui/005.jpg" data-t="板绘插画 · 05"><img src="assets/art/banhui/005.jpg" alt="板绘插画 · 05" loading="lazy"><span class="g-no">05</span></div><div class="g-item" data-src="assets/art/banhui/006.jpg" data-t="板绘插画 · 06"><img src="assets/art/banhui/006.jpg" alt="板绘插画 · 06" loading="lazy"><span class="g-no">06</span></div><div class="g-item" data-src="assets/art/banhui/007.jpg" data-t="板绘插画 · 07"><img src="assets/art/banhui/007.jpg" alt="板绘插画 · 07" loading="lazy"><span class="g-no">07</span></div><div class="g-item" data-src="assets/art/banhui/008.jpg" data-t="板绘插画 · 08"><img src="assets/art/banhui/008.jpg" alt="板绘插画 · 08" loading="lazy"><span class="g-no">08</span></div><div class="g-item" data-src="assets/art/banhui/009.jpg" data-t="板绘插画 · 09"><img src="assets/art/banhui/009.jpg" alt="板绘插画 · 09" loading="lazy"><span class="g-no">09</span></div><div class="g-item" data-src="assets/art/banhui/010.jpg" data-t="板绘插画 · 10"><img src="assets/art/banhui/010.jpg" alt="板绘插画 · 10" loading="lazy"><span class="g-no">10</span></div><div class="g-item" data-src="assets/art/banhui/011.jpg" data-t="板绘插画 · 11"><img src="assets/art/banhui/011.jpg" alt="板绘插画 · 11" loading="lazy"><span class="g-no">11</span></div><div class="g-item" data-src="assets/art/banhui/012.jpg" data-t="板绘插画 · 12"><img src="assets/art/banhui/012.jpg" alt="板绘插画 · 12" loading="lazy"><span class="g-no">12</span></div><div class="g-item" data-src="assets/art/banhui/013.jpg" data-t="板绘插画 · 13"><img src="assets/art/banhui/013.jpg" alt="板绘插画 · 13" loading="lazy"><span class="g-no">13</span></div><div class="g-item" data-src="assets/art/banhui/014.jpg" data-t="板绘插画 · 14"><img src="assets/art/banhui/014.jpg" alt="板绘插画 · 14" loading="lazy"><span class="g-no">14</span></div><div class="g-item" data-src="assets/art/banhui/015.jpg" data-t="板绘插画 · 15"><img src="assets/art/banhui/015.jpg" alt="板绘插画 · 15" loading="lazy"><span class="g-no">15</span></div><div class="g-item" data-src="assets/art/banhui/016.jpg" data-t="板绘插画 · 16"><img src="assets/art/banhui/016.jpg" alt="板绘插画 · 16" loading="lazy"><span class="g-no">16</span></div><div class="g-item" data-src="assets/art/banhui/017.jpg" data-t="板绘插画 · 17"><img src="assets/art/banhui/017.jpg" alt="板绘插画 · 17" loading="lazy"><span class="g-no">17</span></div><div class="g-item" data-src="assets/art/banhui/018.jpg" data-t="板绘插画 · 18"><img src="assets/art/banhui/018.jpg" alt="板绘插画 · 18" loading="lazy"><span class="g-no">18</span></div><div class="g-item" data-src="assets/art/banhui/019.jpg" data-t="板绘插画 · 19"><img src="assets/art/banhui/019.jpg" alt="板绘插画 · 19" loading="lazy"><span class="g-no">19</span></div><div class="g-item" data-src="assets/art/banhui/020.jpg" data-t="板绘插画 · 20"><img src="assets/art/banhui/020.jpg" alt="板绘插画 · 20" loading="lazy"><span class="g-no">20</span></div></div></div><div class="art-group" data-g="amazon"><div class="ag-head"><span class="ag-no">07</span><span class="ag-title">电商视觉 · A+</span><span class="ag-en">E-COMMERCE A+</span><span class="ag-desc">17 Air / 马年 PM 全案 · 中英双语</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/amazon/001.jpg" data-t="电商视觉 · A+ · 01"><img src="assets/art/amazon/001.jpg" alt="电商视觉 · A+ · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/amazon/002.jpg" data-t="电商视觉 · A+ · 02"><img src="assets/art/amazon/002.jpg" alt="电商视觉 · A+ · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/amazon/003.jpg" data-t="电商视觉 · A+ · 03"><img src="assets/art/amazon/003.jpg" alt="电商视觉 · A+ · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/amazon/004.jpg" data-t="电商视觉 · A+ · 04"><img src="assets/art/amazon/004.jpg" alt="电商视觉 · A+ · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/amazon/005.jpg" data-t="电商视觉 · A+ · 05"><img src="assets/art/amazon/005.jpg" alt="电商视觉 · A+ · 05" loading="lazy"><span class="g-no">05</span></div><div class="g-item" data-src="assets/art/amazon/006.jpg" data-t="电商视觉 · A+ · 06"><img src="assets/art/amazon/006.jpg" alt="电商视觉 · A+ · 06" loading="lazy"><span class="g-no">06</span></div><div class="g-item" data-src="assets/art/amazon/007.jpg" data-t="电商视觉 · A+ · 07"><img src="assets/art/amazon/007.jpg" alt="电商视觉 · A+ · 07" loading="lazy"><span class="g-no">07</span></div><div class="g-item" data-src="assets/art/amazon/008.jpg" data-t="电商视觉 · A+ · 08"><img src="assets/art/amazon/008.jpg" alt="电商视觉 · A+ · 08" loading="lazy"><span class="g-no">08</span></div><div class="g-item" data-src="assets/art/amazon/009.jpg" data-t="电商视觉 · A+ · 09"><img src="assets/art/amazon/009.jpg" alt="电商视觉 · A+ · 09" loading="lazy"><span class="g-no">09</span></div><div class="g-item" data-src="assets/art/amazon/010.jpg" data-t="电商视觉 · A+ · 10"><img src="assets/art/amazon/010.jpg" alt="电商视觉 · A+ · 10" loading="lazy"><span class="g-no">10</span></div><div class="g-item" data-src="assets/art/amazon/011.jpg" data-t="电商视觉 · A+ · 11"><img src="assets/art/amazon/011.jpg" alt="电商视觉 · A+ · 11" loading="lazy"><span class="g-no">11</span></div><div class="g-item" data-src="assets/art/amazon/012.jpg" data-t="电商视觉 · A+ · 12"><img src="assets/art/amazon/012.jpg" alt="电商视觉 · A+ · 12" loading="lazy"><span class="g-no">12</span></div><div class="g-item" data-src="assets/art/amazon/013.jpg" data-t="电商视觉 · A+ · 13"><img src="assets/art/amazon/013.jpg" alt="电商视觉 · A+ · 13" loading="lazy"><span class="g-no">13</span></div><div class="g-item" data-src="assets/art/amazon/014.jpg" data-t="电商视觉 · A+ · 14"><img src="assets/art/amazon/014.jpg" alt="电商视觉 · A+ · 14" loading="lazy"><span class="g-no">14</span></div><div class="g-item" data-src="assets/art/amazon/015.jpg" data-t="电商视觉 · A+ · 15"><img src="assets/art/amazon/015.jpg" alt="电商视觉 · A+ · 15" loading="lazy"><span class="g-no">15</span></div><div class="g-item" data-src="assets/art/amazon/016.jpg" data-t="电商视觉 · A+ · 16"><img src="assets/art/amazon/016.jpg" alt="电商视觉 · A+ · 16" loading="lazy"><span class="g-no">16</span></div><div class="g-item" data-src="assets/art/amazon/017.jpg" data-t="电商视觉 · A+ · 17"><img src="assets/art/amazon/017.jpg" alt="电商视觉 · A+ · 17" loading="lazy"><span class="g-no">17</span></div><div class="g-item" data-src="assets/art/amazon/018.jpg" data-t="电商视觉 · A+ · 18"><img src="assets/art/amazon/018.jpg" alt="电商视觉 · A+ · 18" loading="lazy"><span class="g-no">18</span></div><div class="g-item" data-src="assets/art/amazon/019.jpg" data-t="电商视觉 · A+ · 19"><img src="assets/art/amazon/019.jpg" alt="电商视觉 · A+ · 19" loading="lazy"><span class="g-no">19</span></div><div class="g-item" data-src="assets/art/amazon/020.jpg" data-t="电商视觉 · A+ · 20"><img src="assets/art/amazon/020.jpg" alt="电商视觉 · A+ · 20" loading="lazy"><span class="g-no">20</span></div><div class="g-item" data-src="assets/art/amazon/021.jpg" data-t="电商视觉 · A+ · 21"><img src="assets/art/amazon/021.jpg" alt="电商视觉 · A+ · 21" loading="lazy"><span class="g-no">21</span></div><div class="g-item" data-src="assets/art/amazon/022.jpg" data-t="电商视觉 · A+ · 22"><img src="assets/art/amazon/022.jpg" alt="电商视觉 · A+ · 22" loading="lazy"><span class="g-no">22</span></div><div class="g-item" data-src="assets/art/amazon/023.jpg" data-t="电商视觉 · A+ · 23"><img src="assets/art/amazon/023.jpg" alt="电商视觉 · A+ · 23" loading="lazy"><span class="g-no">23</span></div><div class="g-item" data-src="assets/art/amazon/024.jpg" data-t="电商视觉 · A+ · 24"><img src="assets/art/amazon/024.jpg" alt="电商视觉 · A+ · 24" loading="lazy"><span class="g-no">24</span></div><div class="g-item" data-src="assets/art/amazon/025.jpg" data-t="电商视觉 · A+ · 25"><img src="assets/art/amazon/025.jpg" alt="电商视觉 · A+ · 25" loading="lazy"><span class="g-no">25</span></div><div class="g-item" data-src="assets/art/amazon/026.jpg" data-t="电商视觉 · A+ · 26"><img src="assets/art/amazon/026.jpg" alt="电商视觉 · A+ · 26" loading="lazy"><span class="g-no">26</span></div><div class="g-item" data-src="assets/art/amazon/027.jpg" data-t="电商视觉 · A+ · 27"><img src="assets/art/amazon/027.jpg" alt="电商视觉 · A+ · 27" loading="lazy"><span class="g-no">27</span></div><div class="g-item" data-src="assets/art/amazon/028.jpg" data-t="电商视觉 · A+ · 28"><img src="assets/art/amazon/028.jpg" alt="电商视觉 · A+ · 28" loading="lazy"><span class="g-no">28</span></div><div class="g-item" data-src="assets/art/amazon/029.jpg" data-t="电商视觉 · A+ · 29"><img src="assets/art/amazon/029.jpg" alt="电商视觉 · A+ · 29" loading="lazy"><span class="g-no">29</span></div><div class="g-item" data-src="assets/art/amazon/030.jpg" data-t="电商视觉 · A+ · 30"><img src="assets/art/amazon/030.jpg" alt="电商视觉 · A+ · 30" loading="lazy"><span class="g-no">30</span></div><div class="g-item" data-src="assets/art/amazon/031.jpg" data-t="电商视觉 · A+ · 31"><img src="assets/art/amazon/031.jpg" alt="电商视觉 · A+ · 31" loading="lazy"><span class="g-no">31</span></div><div class="g-item" data-src="assets/art/amazon/032.jpg" data-t="电商视觉 · A+ · 32"><img src="assets/art/amazon/032.jpg" alt="电商视觉 · A+ · 32" loading="lazy"><span class="g-no">32</span></div><div class="g-item" data-src="assets/art/amazon/033.jpg" data-t="电商视觉 · A+ · 33"><img src="assets/art/amazon/033.jpg" alt="电商视觉 · A+ · 33" loading="lazy"><span class="g-no">33</span></div><div class="g-item" data-src="assets/art/amazon/034.jpg" data-t="电商视觉 · A+ · 34"><img src="assets/art/amazon/034.jpg" alt="电商视觉 · A+ · 34" loading="lazy"><span class="g-no">34</span></div></div></div><div class="art-group" data-g="card"><div class="ag-head"><span class="ag-no">08</span><span class="ag-title">页面 · 周边设计</span><span class="ag-en">PAGE & MERCH DESIGN</span><span class="ag-desc">CD 样机 · 角色卡牌 · 周边视觉</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/card/001.jpg" data-t="页面 · 周边设计 · 01"><img src="assets/art/card/001.jpg" alt="页面 · 周边设计 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/card/002.jpg" data-t="页面 · 周边设计 · 02"><img src="assets/art/card/002.jpg" alt="页面 · 周边设计 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/card/003.jpg" data-t="页面 · 周边设计 · 03"><img src="assets/art/card/003.jpg" alt="页面 · 周边设计 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/card/004.jpg" data-t="页面 · 周边设计 · 04"><img src="assets/art/card/004.jpg" alt="页面 · 周边设计 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/card/005.jpg" data-t="页面 · 周边设计 · 05"><img src="assets/art/card/005.jpg" alt="页面 · 周边设计 · 05" loading="lazy"><span class="g-no">05</span></div><div class="g-item" data-src="assets/art/card/006.jpg" data-t="页面 · 周边设计 · 06"><img src="assets/art/card/006.jpg" alt="页面 · 周边设计 · 06" loading="lazy"><span class="g-no">06</span></div><div class="g-item" data-src="assets/art/card/007.jpg" data-t="页面 · 周边设计 · 07"><img src="assets/art/card/007.jpg" alt="页面 · 周边设计 · 07" loading="lazy"><span class="g-no">07</span></div><div class="g-item" data-src="assets/art/card/008.jpg" data-t="页面 · 周边设计 · 08"><img src="assets/art/card/008.jpg" alt="页面 · 周边设计 · 08" loading="lazy"><span class="g-no">08</span></div><div class="g-item" data-src="assets/art/card/009.jpg" data-t="页面 · 周边设计 · 09"><img src="assets/art/card/009.jpg" alt="页面 · 周边设计 · 09" loading="lazy"><span class="g-no">09</span></div><div class="g-item" data-src="assets/art/card/010.jpg" data-t="页面 · 周边设计 · 10"><img src="assets/art/card/010.jpg" alt="页面 · 周边设计 · 10" loading="lazy"><span class="g-no">10</span></div><div class="g-item" data-src="assets/art/card/011.jpg" data-t="页面 · 周边设计 · 11"><img src="assets/art/card/011.jpg" alt="页面 · 周边设计 · 11" loading="lazy"><span class="g-no">11</span></div><div class="g-item" data-src="assets/art/card/012.jpg" data-t="页面 · 周边设计 · 12"><img src="assets/art/card/012.jpg" alt="页面 · 周边设计 · 12" loading="lazy"><span class="g-no">12</span></div><div class="g-item" data-src="assets/art/card/013.jpg" data-t="页面 · 周边设计 · 13"><img src="assets/art/card/013.jpg" alt="页面 · 周边设计 · 13" loading="lazy"><span class="g-no">13</span></div><div class="g-item" data-src="assets/art/card/014.jpg" data-t="页面 · 周边设计 · 14"><img src="assets/art/card/014.jpg" alt="页面 · 周边设计 · 14" loading="lazy"><span class="g-no">14</span></div><div class="g-item" data-src="assets/art/card/015.jpg" data-t="页面 · 周边设计 · 15"><img src="assets/art/card/015.jpg" alt="页面 · 周边设计 · 15" loading="lazy"><span class="g-no">15</span></div><div class="g-item" data-src="assets/art/card/016.jpg" data-t="页面 · 周边设计 · 16"><img src="assets/art/card/016.jpg" alt="页面 · 周边设计 · 16" loading="lazy"><span class="g-no">16</span></div><div class="g-item" data-src="assets/art/card/017.jpg" data-t="页面 · 周边设计 · 17"><img src="assets/art/card/017.jpg" alt="页面 · 周边设计 · 17" loading="lazy"><span class="g-no">17</span></div><div class="g-item" data-src="assets/art/card/018.jpg" data-t="页面 · 周边设计 · 18"><img src="assets/art/card/018.jpg" alt="页面 · 周边设计 · 18" loading="lazy"><span class="g-no">18</span></div><div class="g-item" data-src="assets/art/card/019.jpg" data-t="页面 · 周边设计 · 19"><img src="assets/art/card/019.jpg" alt="页面 · 周边设计 · 19" loading="lazy"><span class="g-no">19</span></div></div></div><div class="long-strip" data-g="card"><div class="ls-head"><span>页面设计 · H5 长页</span><small>点击放大 · 横向浏览</small></div><div class="ls-track"><img src="assets/art/card/p01.jpg" alt="页面设计 · 01" data-src="assets/art/card/p01.jpg" data-t="页面设计 · 长页 01" loading="lazy"><img src="assets/art/card/p02.jpg" alt="页面设计 · 02" data-src="assets/art/card/p02.jpg" data-t="页面设计 · 长页 02" loading="lazy"><img src="assets/art/card/p03.jpg" alt="页面设计 · 03" data-src="assets/art/card/p03.jpg" data-t="页面设计 · 长页 03" loading="lazy"><img src="assets/art/card/p04.jpg" alt="页面设计 · 04" data-src="assets/art/card/p04.jpg" data-t="页面设计 · 长页 04" loading="lazy"><img src="assets/art/card/p05.jpg" alt="页面设计 · 05" data-src="assets/art/card/p05.jpg" data-t="页面设计 · 长页 05" loading="lazy"><img src="assets/art/card/p06.jpg" alt="页面设计 · 06" data-src="assets/art/card/p06.jpg" data-t="页面设计 · 长页 06" loading="lazy"><img src="assets/art/card/p07.jpg" alt="页面设计 · 07" data-src="assets/art/card/p07.jpg" data-t="页面设计 · 长页 07" loading="lazy"><img src="assets/art/card/p08.jpg" alt="页面设计 · 08" data-src="assets/art/card/p08.jpg" data-t="页面设计 · 长页 08" loading="lazy"></div></div></div></div>
+    <div id="artGroups"><div class="art-group" data-g="oil"><div class="ag-head"><span class="ag-no">01</span><span class="ag-title">油画</span><span class="ag-en">OIL PAINTING</span><span class="ag-desc">学院写实 · 人物与静物</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/oil/001.jpg" data-t="油画 · 01"><img src="assets/art/oil/001.jpg" alt="油画 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/oil/002.jpg" data-t="油画 · 02"><img src="assets/art/oil/002.jpg" alt="油画 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/oil/003.jpg" data-t="油画 · 03"><img src="assets/art/oil/003.jpg" alt="油画 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/oil/004.jpg" data-t="油画 · 04"><img src="assets/art/oil/004.jpg" alt="油画 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/oil/005.jpg" data-t="油画 · 05"><img src="assets/art/oil/005.jpg" alt="油画 · 05" loading="lazy"><span class="g-no">05</span></div><div class="g-item" data-src="assets/art/oil/006.jpg" data-t="油画 · 06"><img src="assets/art/oil/006.jpg" alt="油画 · 06" loading="lazy"><span class="g-no">06</span></div><div class="g-item" data-src="assets/art/oil/007.jpg" data-t="油画 · 07"><img src="assets/art/oil/007.jpg" alt="油画 · 07" loading="lazy"><span class="g-no">07</span></div><div class="g-item" data-src="assets/art/oil/008.jpg" data-t="油画 · 08"><img src="assets/art/oil/008.jpg" alt="油画 · 08" loading="lazy"><span class="g-no">08</span></div></div></div><div class="art-group" data-g="lacquer"><div class="ag-head"><span class="ag-no">02</span><span class="ag-title">漆画</span><span class="ag-en">LACQUER ART</span><span class="ag-desc">抽象肌理 · 材料实验</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/lacquer/001.jpg" data-t="漆画 · 01"><img src="assets/art/lacquer/001.jpg" alt="漆画 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/lacquer/002.jpg" data-t="漆画 · 02"><img src="assets/art/lacquer/002.jpg" alt="漆画 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/lacquer/003.jpg" data-t="漆画 · 03"><img src="assets/art/lacquer/003.jpg" alt="漆画 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/lacquer/004.jpg" data-t="漆画 · 04"><img src="assets/art/lacquer/004.jpg" alt="漆画 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/lacquer/005.jpg" data-t="漆画 · 05"><img src="assets/art/lacquer/005.jpg" alt="漆画 · 05" loading="lazy"><span class="g-no">05</span></div></div></div><div class="art-group" data-g="sketch"><div class="ag-head"><span class="ag-no">03</span><span class="ag-title">素描</span><span class="ag-en">SKETCH</span><span class="ag-desc">造型基础 · 写实训练</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/sketch/001.jpg" data-t="素描 · 01"><img src="assets/art/sketch/001.jpg" alt="素描 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/sketch/002.jpg" data-t="素描 · 02"><img src="assets/art/sketch/002.jpg" alt="素描 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/sketch/003.jpg" data-t="素描 · 03"><img src="assets/art/sketch/003.jpg" alt="素描 · 03" loading="lazy"><span class="g-no">03</span></div></div></div><div class="art-group" data-g="guohua"><div class="ag-head"><span class="ag-no">04</span><span class="ag-title">国画 · 水彩</span><span class="ag-en">INK & WATERCOLOR</span><span class="ag-desc">工笔 · 写意 · 水彩</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/guohua/001.jpg" data-t="国画 · 水彩 · 01"><img src="assets/art/guohua/001.jpg" alt="国画 · 水彩 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/guohua/002.jpg" data-t="国画 · 水彩 · 02"><img src="assets/art/guohua/002.jpg" alt="国画 · 水彩 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/guohua/003.jpg" data-t="国画 · 水彩 · 03"><img src="assets/art/guohua/003.jpg" alt="国画 · 水彩 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/guohua/004.jpg" data-t="国画 · 水彩 · 04"><img src="assets/art/guohua/004.jpg" alt="国画 · 水彩 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/guohua/005.jpg" data-t="国画 · 水彩 · 05"><img src="assets/art/guohua/005.jpg" alt="国画 · 水彩 · 05" loading="lazy"><span class="g-no">05</span></div><div class="g-item" data-src="assets/art/guohua/006.jpg" data-t="国画 · 水彩 · 06"><img src="assets/art/guohua/006.jpg" alt="国画 · 水彩 · 06" loading="lazy"><span class="g-no">06</span></div><div class="g-item" data-src="assets/art/guohua/007.jpg" data-t="国画 · 水彩 · 07"><img src="assets/art/guohua/007.jpg" alt="国画 · 水彩 · 07" loading="lazy"><span class="g-no">07</span></div><div class="g-item" data-src="assets/art/guohua/008.jpg" data-t="国画 · 水彩 · 08"><img src="assets/art/guohua/008.jpg" alt="国画 · 水彩 · 08" loading="lazy"><span class="g-no">08</span></div><div class="g-item" data-src="assets/art/guohua/009.jpg" data-t="国画 · 水彩 · 09"><img src="assets/art/guohua/009.jpg" alt="国画 · 水彩 · 09" loading="lazy"><span class="g-no">09</span></div><div class="g-item" data-src="assets/art/guohua/010.jpg" data-t="国画 · 水彩 · 10"><img src="assets/art/guohua/010.jpg" alt="国画 · 水彩 · 10" loading="lazy"><span class="g-no">10</span></div></div></div><div class="art-group" data-g="print"><div class="ag-head"><span class="ag-no">05</span><span class="ag-title">版画 · 综合材料</span><span class="ag-en">PRINT & MIXED MEDIA</span><span class="ag-desc">综合材料实验</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/print/001.jpg" data-t="版画 · 综合材料 · 01"><img src="assets/art/print/001.jpg" alt="版画 · 综合材料 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/print/002.jpg" data-t="版画 · 综合材料 · 02"><img src="assets/art/print/002.jpg" alt="版画 · 综合材料 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/print/003.jpg" data-t="版画 · 综合材料 · 03"><img src="assets/art/print/003.jpg" alt="版画 · 综合材料 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/print/004.jpg" data-t="版画 · 综合材料 · 04"><img src="assets/art/print/004.jpg" alt="版画 · 综合材料 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/print/005.jpg" data-t="版画 · 综合材料 · 05"><img src="assets/art/print/005.jpg" alt="版画 · 综合材料 · 05" loading="lazy"><span class="g-no">05</span></div></div></div><div class="art-group" data-g="banhui"><div class="ag-head"><span class="ag-no">06</span><span class="ag-title">板绘插画</span><span class="ag-en">DIGITAL ILLUSTRATION</span><span class="ag-desc">二次元角色 · 同人创作</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/banhui/001.jpg" data-t="板绘插画 · 01"><img src="assets/art/banhui/001.jpg" alt="板绘插画 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/banhui/002.jpg" data-t="板绘插画 · 02"><img src="assets/art/banhui/002.jpg" alt="板绘插画 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/banhui/003.jpg" data-t="板绘插画 · 03"><img src="assets/art/banhui/003.jpg" alt="板绘插画 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/banhui/004.jpg" data-t="板绘插画 · 04"><img src="assets/art/banhui/004.jpg" alt="板绘插画 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/banhui/005.jpg" data-t="板绘插画 · 05"><img src="assets/art/banhui/005.jpg" alt="板绘插画 · 05" loading="lazy"><span class="g-no">05</span></div><div class="g-item" data-src="assets/art/banhui/006.jpg" data-t="板绘插画 · 06"><img src="assets/art/banhui/006.jpg" alt="板绘插画 · 06" loading="lazy"><span class="g-no">06</span></div><div class="g-item" data-src="assets/art/banhui/007.jpg" data-t="板绘插画 · 07"><img src="assets/art/banhui/007.jpg" alt="板绘插画 · 07" loading="lazy"><span class="g-no">07</span></div><div class="g-item" data-src="assets/art/banhui/008.jpg" data-t="板绘插画 · 08"><img src="assets/art/banhui/008.jpg" alt="板绘插画 · 08" loading="lazy"><span class="g-no">08</span></div><div class="g-item" data-src="assets/art/banhui/009.jpg" data-t="板绘插画 · 09"><img src="assets/art/banhui/009.jpg" alt="板绘插画 · 09" loading="lazy"><span class="g-no">09</span></div><div class="g-item" data-src="assets/art/banhui/010.jpg" data-t="板绘插画 · 10"><img src="assets/art/banhui/010.jpg" alt="板绘插画 · 10" loading="lazy"><span class="g-no">10</span></div><div class="g-item" data-src="assets/art/banhui/011.jpg" data-t="板绘插画 · 11"><img src="assets/art/banhui/011.jpg" alt="板绘插画 · 11" loading="lazy"><span class="g-no">11</span></div><div class="g-item" data-src="assets/art/banhui/012.jpg" data-t="板绘插画 · 12"><img src="assets/art/banhui/012.jpg" alt="板绘插画 · 12" loading="lazy"><span class="g-no">12</span></div><div class="g-item" data-src="assets/art/banhui/013.jpg" data-t="板绘插画 · 13"><img src="assets/art/banhui/013.jpg" alt="板绘插画 · 13" loading="lazy"><span class="g-no">13</span></div><div class="g-item" data-src="assets/art/banhui/014.jpg" data-t="板绘插画 · 14"><img src="assets/art/banhui/014.jpg" alt="板绘插画 · 14" loading="lazy"><span class="g-no">14</span></div><div class="g-item" data-src="assets/art/banhui/015.jpg" data-t="板绘插画 · 15"><img src="assets/art/banhui/015.jpg" alt="板绘插画 · 15" loading="lazy"><span class="g-no">15</span></div><div class="g-item" data-src="assets/art/banhui/016.jpg" data-t="板绘插画 · 16"><img src="assets/art/banhui/016.jpg" alt="板绘插画 · 16" loading="lazy"><span class="g-no">16</span></div><div class="g-item" data-src="assets/art/banhui/017.jpg" data-t="板绘插画 · 17"><img src="assets/art/banhui/017.jpg" alt="板绘插画 · 17" loading="lazy"><span class="g-no">17</span></div><div class="g-item" data-src="assets/art/banhui/018.jpg" data-t="板绘插画 · 18"><img src="assets/art/banhui/018.jpg" alt="板绘插画 · 18" loading="lazy"><span class="g-no">18</span></div><div class="g-item" data-src="assets/art/banhui/019.jpg" data-t="板绘插画 · 19"><img src="assets/art/banhui/019.jpg" alt="板绘插画 · 19" loading="lazy"><span class="g-no">19</span></div><div class="g-item" data-src="assets/art/banhui/020.jpg" data-t="板绘插画 · 20"><img src="assets/art/banhui/020.jpg" alt="板绘插画 · 20" loading="lazy"><span class="g-no">20</span></div></div></div><div class="art-group" data-g="amazon"><div class="ag-head"><span class="ag-no">07</span><span class="ag-title">电商视觉 · A+</span><span class="ag-en">E-COMMERCE A+</span><span class="ag-desc">17 Air / 马年 PM 全案 · 中英双语</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/amazon/001.jpg" data-t="电商视觉 · A+ · 01"><img src="assets/art/amazon/001.jpg" alt="电商视觉 · A+ · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/amazon/002.jpg" data-t="电商视觉 · A+ · 02"><img src="assets/art/amazon/002.jpg" alt="电商视觉 · A+ · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/amazon/003.jpg" data-t="电商视觉 · A+ · 03"><img src="assets/art/amazon/003.jpg" alt="电商视觉 · A+ · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/amazon/004.jpg" data-t="电商视觉 · A+ · 04"><img src="assets/art/amazon/004.jpg" alt="电商视觉 · A+ · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/amazon/005.jpg" data-t="电商视觉 · A+ · 05"><img src="assets/art/amazon/005.jpg" alt="电商视觉 · A+ · 05" loading="lazy"><span class="g-no">05</span></div><div class="g-item" data-src="assets/art/amazon/006.jpg" data-t="电商视觉 · A+ · 06"><img src="assets/art/amazon/006.jpg" alt="电商视觉 · A+ · 06" loading="lazy"><span class="g-no">06</span></div><div class="g-item" data-src="assets/art/amazon/007.jpg" data-t="电商视觉 · A+ · 07"><img src="assets/art/amazon/007.jpg" alt="电商视觉 · A+ · 07" loading="lazy"><span class="g-no">07</span></div><div class="g-item" data-src="assets/art/amazon/008.jpg" data-t="电商视觉 · A+ · 08"><img src="assets/art/amazon/008.jpg" alt="电商视觉 · A+ · 08" loading="lazy"><span class="g-no">08</span></div><div class="g-item" data-src="assets/art/amazon/009.jpg" data-t="电商视觉 · A+ · 09"><img src="assets/art/amazon/009.jpg" alt="电商视觉 · A+ · 09" loading="lazy"><span class="g-no">09</span></div><div class="g-item" data-src="assets/art/amazon/010.jpg" data-t="电商视觉 · A+ · 10"><img src="assets/art/amazon/010.jpg" alt="电商视觉 · A+ · 10" loading="lazy"><span class="g-no">10</span></div><div class="g-item" data-src="assets/art/amazon/011.jpg" data-t="电商视觉 · A+ · 11"><img src="assets/art/amazon/011.jpg" alt="电商视觉 · A+ · 11" loading="lazy"><span class="g-no">11</span></div><div class="g-item" data-src="assets/art/amazon/012.jpg" data-t="电商视觉 · A+ · 12"><img src="assets/art/amazon/012.jpg" alt="电商视觉 · A+ · 12" loading="lazy"><span class="g-no">12</span></div><div class="g-item" data-src="assets/art/amazon/013.jpg" data-t="电商视觉 · A+ · 13"><img src="assets/art/amazon/013.jpg" alt="电商视觉 · A+ · 13" loading="lazy"><span class="g-no">13</span></div><div class="g-item" data-src="assets/art/amazon/014.jpg" data-t="电商视觉 · A+ · 14"><img src="assets/art/amazon/014.jpg" alt="电商视觉 · A+ · 14" loading="lazy"><span class="g-no">14</span></div><div class="g-item" data-src="assets/art/amazon/015.jpg" data-t="电商视觉 · A+ · 15"><img src="assets/art/amazon/015.jpg" alt="电商视觉 · A+ · 15" loading="lazy"><span class="g-no">15</span></div><div class="g-item" data-src="assets/art/amazon/016.jpg" data-t="电商视觉 · A+ · 16"><img src="assets/art/amazon/016.jpg" alt="电商视觉 · A+ · 16" loading="lazy"><span class="g-no">16</span></div><div class="g-item" data-src="assets/art/amazon/017.jpg" data-t="电商视觉 · A+ · 17"><img src="assets/art/amazon/017.jpg" alt="电商视觉 · A+ · 17" loading="lazy"><span class="g-no">17</span></div><div class="g-item" data-src="assets/art/amazon/018.jpg" data-t="电商视觉 · A+ · 18"><img src="assets/art/amazon/018.jpg" alt="电商视觉 · A+ · 18" loading="lazy"><span class="g-no">18</span></div><div class="g-item" data-src="assets/art/amazon/019.jpg" data-t="电商视觉 · A+ · 19"><img src="assets/art/amazon/019.jpg" alt="电商视觉 · A+ · 19" loading="lazy"><span class="g-no">19</span></div><div class="g-item" data-src="assets/art/amazon/020.jpg" data-t="电商视觉 · A+ · 20"><img src="assets/art/amazon/020.jpg" alt="电商视觉 · A+ · 20" loading="lazy"><span class="g-no">20</span></div><div class="g-item" data-src="assets/art/amazon/021.jpg" data-t="电商视觉 · A+ · 21"><img src="assets/art/amazon/021.jpg" alt="电商视觉 · A+ · 21" loading="lazy"><span class="g-no">21</span></div><div class="g-item" data-src="assets/art/amazon/022.jpg" data-t="电商视觉 · A+ · 22"><img src="assets/art/amazon/022.jpg" alt="电商视觉 · A+ · 22" loading="lazy"><span class="g-no">22</span></div><div class="g-item" data-src="assets/art/amazon/023.jpg" data-t="电商视觉 · A+ · 23"><img src="assets/art/amazon/023.jpg" alt="电商视觉 · A+ · 23" loading="lazy"><span class="g-no">23</span></div><div class="g-item" data-src="assets/art/amazon/024.jpg" data-t="电商视觉 · A+ · 24"><img src="assets/art/amazon/024.jpg" alt="电商视觉 · A+ · 24" loading="lazy"><span class="g-no">24</span></div><div class="g-item" data-src="assets/art/amazon/025.jpg" data-t="电商视觉 · A+ · 25"><img src="assets/art/amazon/025.jpg" alt="电商视觉 · A+ · 25" loading="lazy"><span class="g-no">25</span></div><div class="g-item" data-src="assets/art/amazon/026.jpg" data-t="电商视觉 · A+ · 26"><img src="assets/art/amazon/026.jpg" alt="电商视觉 · A+ · 26" loading="lazy"><span class="g-no">26</span></div><div class="g-item" data-src="assets/art/amazon/027.jpg" data-t="电商视觉 · A+ · 27"><img src="assets/art/amazon/027.jpg" alt="电商视觉 · A+ · 27" loading="lazy"><span class="g-no">27</span></div><div class="g-item" data-src="assets/art/amazon/028.jpg" data-t="电商视觉 · A+ · 28"><img src="assets/art/amazon/028.jpg" alt="电商视觉 · A+ · 28" loading="lazy"><span class="g-no">28</span></div><div class="g-item" data-src="assets/art/amazon/029.jpg" data-t="电商视觉 · A+ · 29"><img src="assets/art/amazon/029.jpg" alt="电商视觉 · A+ · 29" loading="lazy"><span class="g-no">29</span></div><div class="g-item" data-src="assets/art/amazon/030.jpg" data-t="电商视觉 · A+ · 30"><img src="assets/art/amazon/030.jpg" alt="电商视觉 · A+ · 30" loading="lazy"><span class="g-no">30</span></div><div class="g-item" data-src="assets/art/amazon/031.jpg" data-t="电商视觉 · A+ · 31"><img src="assets/art/amazon/031.jpg" alt="电商视觉 · A+ · 31" loading="lazy"><span class="g-no">31</span></div><div class="g-item" data-src="assets/art/amazon/032.jpg" data-t="电商视觉 · A+ · 32"><img src="assets/art/amazon/032.jpg" alt="电商视觉 · A+ · 32" loading="lazy"><span class="g-no">32</span></div><div class="g-item" data-src="assets/art/amazon/033.jpg" data-t="电商视觉 · A+ · 33"><img src="assets/art/amazon/033.jpg" alt="电商视觉 · A+ · 33" loading="lazy"><span class="g-no">33</span></div><div class="g-item" data-src="assets/art/amazon/034.jpg" data-t="电商视觉 · A+ · 34"><img src="assets/art/amazon/034.jpg" alt="电商视觉 · A+ · 34" loading="lazy"><span class="g-no">34</span></div></div></div><div class="art-group" data-g="card"><div class="ag-head"><span class="ag-no">08</span><span class="ag-title">页面 · 周边设计</span><span class="ag-en">PAGE & MERCH DESIGN</span><span class="ag-desc">CD 样机 · 角色卡牌 · 周边视觉</span></div><div class="art-gallery natural"><div class="g-item" data-src="assets/art/card/001.jpg" data-t="页面 · 周边设计 · 01"><img src="assets/art/card/001.jpg" alt="页面 · 周边设计 · 01" loading="lazy"><span class="g-no">01</span></div><div class="g-item" data-src="assets/art/card/002.jpg" data-t="页面 · 周边设计 · 02"><img src="assets/art/card/002.jpg" alt="页面 · 周边设计 · 02" loading="lazy"><span class="g-no">02</span></div><div class="g-item" data-src="assets/art/card/003.jpg" data-t="页面 · 周边设计 · 03"><img src="assets/art/card/003.jpg" alt="页面 · 周边设计 · 03" loading="lazy"><span class="g-no">03</span></div><div class="g-item" data-src="assets/art/card/004.jpg" data-t="页面 · 周边设计 · 04"><img src="assets/art/card/004.jpg" alt="页面 · 周边设计 · 04" loading="lazy"><span class="g-no">04</span></div><div class="g-item" data-src="assets/art/card/005.jpg" data-t="页面 · 周边设计 · 05"><img src="assets/art/card/005.jpg" alt="页面 · 周边设计 · 05" loading="lazy"><span class="g-no">05</span></div><div class="g-item" data-src="assets/art/card/006.jpg" data-t="页面 · 周边设计 · 06"><img src="assets/art/card/006.jpg" alt="页面 · 周边设计 · 06" loading="lazy"><span class="g-no">06</span></div><div class="g-item" data-src="assets/art/card/007.jpg" data-t="页面 · 周边设计 · 07"><img src="assets/art/card/007.jpg" alt="页面 · 周边设计 · 07" loading="lazy"><span class="g-no">07</span></div><div class="g-item" data-src="assets/art/card/008.jpg" data-t="页面 · 周边设计 · 08"><img src="assets/art/card/008.jpg" alt="页面 · 周边设计 · 08" loading="lazy"><span class="g-no">08</span></div><div class="g-item" data-src="assets/art/card/009.jpg" data-t="页面 · 周边设计 · 09"><img src="assets/art/card/009.jpg" alt="页面 · 周边设计 · 09" loading="lazy"><span class="g-no">09</span></div><div class="g-item" data-src="assets/art/card/010.jpg" data-t="页面 · 周边设计 · 10"><img src="assets/art/card/010.jpg" alt="页面 · 周边设计 · 10" loading="lazy"><span class="g-no">10</span></div><div class="g-item" data-src="assets/art/card/011.jpg" data-t="页面 · 周边设计 · 11"><img src="assets/art/card/011.jpg" alt="页面 · 周边设计 · 11" loading="lazy"><span class="g-no">11</span></div><div class="g-item" data-src="assets/art/card/012.jpg" data-t="页面 · 周边设计 · 12"><img src="assets/art/card/012.jpg" alt="页面 · 周边设计 · 12" loading="lazy"><span class="g-no">12</span></div><div class="g-item" data-src="assets/art/card/013.jpg" data-t="页面 · 周边设计 · 13"><img src="assets/art/card/013.jpg" alt="页面 · 周边设计 · 13" loading="lazy"><span class="g-no">13</span></div><div class="g-item" data-src="assets/art/card/014.jpg" data-t="页面 · 周边设计 · 14"><img src="assets/art/card/014.jpg" alt="页面 · 周边设计 · 14" loading="lazy"><span class="g-no">14</span></div><div class="g-item" data-src="assets/art/card/015.jpg" data-t="页面 · 周边设计 · 15"><img src="assets/art/card/015.jpg" alt="页面 · 周边设计 · 15" loading="lazy"><span class="g-no">15</span></div><div class="g-item" data-src="assets/art/card/016.jpg" data-t="页面 · 周边设计 · 16"><img src="assets/art/card/016.jpg" alt="页面 · 周边设计 · 16" loading="lazy"><span class="g-no">16</span></div><div class="g-item" data-src="assets/art/card/017.jpg" data-t="页面 · 周边设计 · 17"><img src="assets/art/card/017.jpg" alt="页面 · 周边设计 · 17" loading="lazy"><span class="g-no">17</span></div><div class="g-item" data-src="assets/art/card/018.jpg" data-t="页面 · 周边设计 · 18"><img src="assets/art/card/018.jpg" alt="页面 · 周边设计 · 18" loading="lazy"><span class="g-no">18</span></div><div class="g-item" data-src="assets/art/card/019.jpg" data-t="页面 · 周边设计 · 19"><img src="assets/art/card/019.jpg" alt="页面 · 周边设计 · 19" loading="lazy"><span class="g-no">19</span></div></div></div><div class="long-strip" data-g="card"><div class="ls-head"><span>页面设计 · H5 长页</span><small>点击放大 · 横向浏览</small></div><div class="ls-track"><img src="assets/art/card/p01.jpg" alt="页面设计 · 01" data-src="assets/art/card/p01.jpg" data-t="页面设计 · 长页 01" loading="lazy"><img src="assets/art/card/p02.jpg" alt="页面设计 · 02" data-src="assets/art/card/p02.jpg" data-t="页面设计 · 长页 02" loading="lazy"><img src="assets/art/card/p03.jpg" alt="页面设计 · 03" data-src="assets/art/card/p03.jpg" data-t="页面设计 · 长页 03" loading="lazy"><img src="assets/art/card/p04.jpg" alt="页面设计 · 04" data-src="assets/art/card/p04.jpg" data-t="页面设计 · 长页 04" loading="lazy"><img src="assets/art/card/p05.jpg" alt="页面设计 · 05" data-src="assets/art/card/p05.jpg" data-t="页面设计 · 长页 05" loading="lazy"><img src="assets/art/card/p06.jpg" alt="页面设计 · 06" data-src="assets/art/card/p06.jpg" data-t="页面设计 · 长页 06" loading="lazy"><img src="assets/art/card/p07.jpg" alt="页面设计 · 07" data-src="assets/art/card/p07.jpg" data-t="页面设计 · 长页 07" loading="lazy"><img src="assets/art/card/p08.jpg" alt="页面设计 · 08" data-src="assets/art/card/p08.jpg" data-t="页面设计 · 长页 08" loading="lazy"></div></div></div>
     <div class="more-hint">点击任意作品放大欣赏 · 共 <b>112</b> 件</div>
   </div>
 </section>
@@ -782,9 +1039,39 @@ footer p b{color:var(--ink)}
     player.src=file;t.textContent=title;lb.classList.add('open');document.body.style.overflow='hidden';
     player.play().catch(function(){});
   }
+  var VMETA={
+    '今天开始我当家':['剧本 / 角色设计 / 场景设计 / 分镜 / AI 生成 / 剪辑','从设定到成片独立完成，古装家庭题材完整叙事'],
+    '全英文短剧':['剧本 / 角色资产 / 分镜 / AI 生成 / 双语字幕','国际版短剧，中英双语全流程'],
+    '公主只想苟':['剧本 / 角色设计 / 场景设计 / 分镜 / AI 生成 / 剪辑','从文字设定建立角色与场景资产，完成完整镜头制作与成片'],
+    '海外短剧 · 太阳神':['角色资产 / 分镜 / AI 生成','海外题材角色资产先行'],
+    '狼人':['角色设计 / 场景设计 / 分镜 / AI 生成','悬疑氛围与镜头节奏'],
+    '神明离线后，暴君信徒彻底疯了':['剧本 / 角色设计 / 分镜 / AI 生成','奇幻世界观与角色叙事'],
+    '釉色里的暗纹':['剧本 / 分镜 / AI 生成 / 剪辑','8 月样片成片'],
+    '釉色里的暗纹 · 完整版':['剧本 / 分镜 / 资产 / AI 生成 / 剪辑 / 成片','完整成片 241 秒，全流程独立完成'],
+    '高光剪辑':['高光拆条 / 混剪 / 节奏','高光混剪，节奏控制']
+  };
+  document.querySelectorAll('#videoGrid .v-card').forEach(function(card){
+    var meta=VMETA[card.dataset.title];
+    if(!meta)return;
+    var info=card.querySelector('.v-info');
+    if(!info)return;
+    var div=document.createElement('div');
+    div.className='v-work';
+    div.innerHTML='<b>我的工作：</b>'+meta[0];
+    var ch=document.createElement('div');
+    ch.className='v-chain';
+    ['剧本','角色','场景','分镜','成片'].forEach(function(s){
+      var sp=document.createElement('span');sp.textContent=s;ch.appendChild(sp);
+    });
+    info.appendChild(div);info.appendChild(ch);
+  });
   document.addEventListener('click',function(e){
     var card=e.target.closest('.v-card');
     if(card && card.dataset.file) openVideo(card.dataset.file,card.dataset.title);
+  });
+  document.addEventListener('click',function(e){
+    var m=e.target.closest('.feat-media.video');
+    if(m && m.dataset.file) openVideo(m.dataset.file,m.dataset.title);
   });
   function closeVideo(){lb.classList.remove('open');player.pause();player.removeAttribute('src');player.load();document.body.style.overflow='';}
   document.getElementById('videoClose').addEventListener('click',closeVideo);
@@ -823,9 +1110,9 @@ footer p b{color:var(--ink)}
 /* ===== 岗位视角 ===== */
 (function(){
   var ROLES={
-    all:{t:'全能视觉创作者',mark:'全',
-      d:'美术学根基 × 数字创作 × AI 全流程。油画、漆画、素描、国画、水彩、版画、板绘七艺俱全，从架上绘画到 AI 短剧，一个人就是一条完整的视觉生产线。',
-      to:'作品导览：插画集 → 美术作品 → AI 短剧 → 学员商单 → 海外短剧 → 剧本 → 角色资产', cats:null},
+    all:{t:'AI 视觉创作者',mark:'AI',
+      d:'美术科班出身，不止生成图片。擅长把一个创意，从角色与场景设计，推进到分镜、AI 生成与最终成片——传统美术底子 + 视觉设计 + 角色资产 + 叙事 + 视频，这是一个具体的组合能力。',
+      to:'导览：代表作品 → 角色·场景资产 → AI 短剧 → 美术作品 → 剧本 → 商业视觉', cats:null},
     illustrator:{t:'插画师 · 原画师',mark:'绘',
       d:'二次元角色设计、漫画分镜与叙事、IP 卡牌与周边。板绘 20 幅 + 插画集 32 页 + 漫画 27 页 + 角色卡牌 / CD 样机设计，从纸面到屏幕的角色叙事能力。',
       to:'重点作品：板绘插画 → 《相逢之时》插画集 → 《魔术师的禁果》漫画 → 页面·周边设计', cats:['banhui','card']},
