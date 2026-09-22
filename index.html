@@ -173,6 +173,163 @@ section{padding:90px 0}
 .lb-title{color:rgba(255,255,255,.92);font-size:14px;letter-spacing:1px;margin-top:12px;text-align:center}
 .lb-hint{color:rgba(255,255,255,.45);font-size:11.5px;text-align:center;margin-top:4px;letter-spacing:1px}
 
+
+/* ===== 项目详情 ===== */
+(function(){
+  var PROJ={
+    '釉色里的暗纹 · 完整版':{
+      tag:'AI 短剧 · 完整成片',meta:'241 秒 · 2026 · 8 月样片',video:'assets/videos/vid_youse_full.mp4',poster:'assets/videos/poster_vid_youse_full.jpg',
+      intro:'8 月样片完整成片，配套剧本与逐镜头分镜脚本，独立完成从文字到成片的全流程。',
+      duty:['剧本','分镜','角色资产','AI 生成','剪辑','成片'],
+      goal:'完成一部从剧本到成片的完整 AI 短剧样片，验证全流程制作管线。',
+      vision:'以角色与场景视觉先行，统一画面风格与氛围基调。',
+      role:'建立与剧本匹配的角色视觉，确保跨镜头形象一致。',
+      scene:'依据场景设定完成关键场景的视觉与氛围控制。',
+      story:'配套逐镜头分镜脚本，覆盖画面、机位、台词与时长设计。',
+      ai:'基于角色与场景资产进行图生视频 / 文生视频生成，并对镜头做迭代。',
+      final:'剪辑合成、节奏与音效处理，输出完整成片。',
+      sum:'解决的问题：从创意到成片的中间环节如何落地。关键视觉决策：先定角色与场景资产、再推进镜头，保证一致性。工作价值：沉淀出一条可复用的 AI 短剧生产流程。'},
+    '公主只想苟':{
+      tag:'AI 短剧 · 完整短剧',meta:'318 秒 · 2026 · 权谋成长',video:'assets/videos/vid_gongzhu.mp4',poster:'assets/videos/poster_vid_gongzhu.jpg',
+      intro:'从文字设定开始建立角色与场景资产，并完成完整镜头制作与成片。',
+      duty:['剧本','角色设计','场景设计','分镜','AI 生成','剪辑'],
+      goal:'把剧本文字转化为具备一致角色与场景的完整成片。',
+      vision:'古装权谋基调，轻松成长叙事，角色先行。',
+      role:'女主三视图与常服、将军战袍、师傅华服等人物资产，保障角色一致性。',
+      scene:'朝堂、战场、御花园、沈府、馄饨摊等场景资产，支撑不同叙事空间。',
+      story:'依据剧本完成分镜与镜头设计，控制叙事节奏。',
+      ai:'角色与场景资产驱动 AI 生成，统一画面风格。',
+      final:'剪辑合成输出成片。',
+      sum:'角色与场景资产的一致性，是这类短剧最核心的视觉决策；先建资产再生成镜头，让 AI 产出稳定可用。'},
+    '今天开始我当家':{
+      tag:'AI 短剧 · 家庭',meta:'172 秒 · 2026',video:'assets/videos/vid_dangjia.mp4',poster:'assets/videos/poster_vid_dangjia.jpg',
+      intro:'古装家庭题材短剧，独立完成从设定到成片的制作。',
+      duty:['剧本','角色设计','场景设计','分镜','AI 生成','剪辑'],
+      goal:'完成题材化短剧样片，验证多场景叙事制作能力。',
+      vision:'家庭叙事基调，温暖明确的视觉氛围。',
+      role:'按剧本建立角色视觉，统一形象。',
+      scene:'场景设计与氛围控制支撑叙事。',
+      story:'分镜与镜头设计保证叙事连贯。',
+      ai:'基于资产进行 AI 镜头生成与迭代。',
+      final:'剪辑与节奏处理输出成片。',
+      sum:'以完整流程完成题材化短剧，验证不同题材下的全流程生产能力。'},
+    '全英文短剧':{
+      tag:'AI 短剧 · 国际版',meta:'125 秒 · 2026 · 中英双语',video:'assets/videos/vid_quanyingwen.mp4',poster:'assets/videos/poster_vid_quanyingwen.jpg',
+      intro:'国际版短剧样片，中英双语全流程制作。',
+      duty:['剧本','角色资产','分镜','AI 生成','双语字幕'],
+      goal:'完成适配海外语境的双语短剧样片。',
+      vision:'国际化的角色与场景视觉。',
+      role:'建立海外向角色资产，统一形象。',
+      scene:'场景设计与氛围控制。',
+      story:'分镜设计保证叙事与字幕节奏。',
+      ai:'资产驱动 AI 生成，双语字幕合成。',
+      final:'剪辑输出成片。',
+      sum:'证明全流程能力可迁移到国际语境内容制作。'},
+    '海外短剧 · 太阳神':{
+      tag:'AI 短剧 · 海外样片',meta:'68 秒 · 2026 · 海外题材',video:'assets/videos/vid_taiyangshen.mp4',poster:'assets/videos/poster_vid_taiyangshen.jpg',
+      intro:'海外题材样片，角色资产先行。',
+      duty:['角色资产','分镜','AI 生成'],
+      goal:'快速验证海外题材角色资产的可用性。',
+      vision:'海外题材的角色与场景风格。',
+      role:'建立海外向角色资产。',
+      scene:'场景视觉与氛围。',
+      story:'分镜与镜头节奏。',
+      ai:'资产驱动 AI 生成。',
+      final:'样片成片输出。',
+      sum:'以资产先行的方式完成海外题材样片。'},
+    '狼人':{
+      tag:'AI 短剧 · 悬疑',meta:'57 秒 · 2026 · 悬疑氛围',video:'assets/videos/vid_langren.mp4',poster:'assets/videos/poster_vid_langren.jpg',
+      intro:'悬疑题材短剧样片，侧重氛围与镜头节奏。',
+      duty:['角色设计','场景设计','分镜','AI 生成'],
+      goal:'完成悬疑题材的短片段落样片。',
+      vision:'悬疑氛围、光影与节奏控制。',
+      role:'角色视觉设计。',
+      scene:'场景氛围设计。',
+      story:'分镜控制悬念节奏。',
+      ai:'AI 生成镜头。',
+      final:'样片输出。',
+      sum:'在短时长内完成氛围与节奏的视觉控制。'},
+    '神明离线后，暴君信徒彻底疯了':{
+      tag:'AI 短剧 · 奇幻',meta:'73 秒 · 2026 · 奇幻叙事',video:'assets/videos/vid_shenming.mp4',poster:'assets/videos/poster_vid_shenming.jpg',
+      intro:'奇幻世界观短剧样片，角色叙事驱动。',
+      duty:['剧本','角色设计','分镜','AI 生成'],
+      goal:'完成奇幻题材叙事样片。',
+      vision:'奇幻世界观的视觉基调。',
+      role:'角色设计与形象一致性。',
+      scene:'场景视觉支撑世界观。',
+      story:'分镜与叙事节奏。',
+      ai:'AI 生成镜头。',
+      final:'样片输出。',
+      sum:'用短时长建立世界观并完成角色叙事。'},
+    '釉色里的暗纹':{
+      tag:'AI 短剧 · 8 月样片',meta:'197 秒 · 2026 · 剧情',video:'assets/videos/vid_youse.mp4',poster:'assets/videos/poster_vid_youse.jpg',
+      intro:'8 月样片，完整剧本配套分镜脚本与成片。',
+      duty:['剧本','分镜','AI 生成','剪辑'],
+      goal:'完成样片制作并沉淀流程。',
+      vision:'剧情向视觉氛围。',
+      role:'角色视觉统一。',
+      scene:'场景氛围控制。',
+      story:'分镜脚本与镜头设计。',
+      ai:'AI 生成与迭代。',
+      final:'剪辑输出样片。',
+      sum:'样片阶段即完成剧本到成片的闭环。'},
+    '高光剪辑':{
+      tag:'AI 短剧 · 高光混剪',meta:'80 秒 · 2026 · 混剪',video:'assets/videos/vid_gaoguang.mp4',poster:'assets/videos/poster_vid_gaoguang.jpg',
+      intro:'高光片段拆条与混剪，节奏控制。',
+      duty:['高光拆条','混剪','节奏'],
+      goal:'把成片素材重组为高光混剪。',
+      vision:'保留叙事张力与节奏。',
+      role:'—',
+      scene:'—',
+      story:'镜头重组与节奏。',
+      ai:'—',
+      final:'混剪成片。',
+      sum:'从已有成片提取高光，重构节奏与情绪。'}
+  };
+  var lb=document.getElementById('projLightbox'), vid=document.getElementById('projVideo'),
+      poster=document.getElementById('projPoster');
+  function openProject(title){
+    var p=PROJ[title];
+    if(!p)return false;
+    document.getElementById('projTag').textContent=p.tag;
+    document.getElementById('projTitle').textContent=title;
+    document.getElementById('projMeta').textContent=p.meta;
+    document.getElementById('projIntro').textContent=p.intro;
+    var duty=document.getElementById('projDuty');duty.innerHTML='';
+    p.duty.forEach(function(d){var s=document.createElement('span');s.textContent=d;duty.appendChild(s);});
+    function set(id,val,skip){
+      var el=document.getElementById(id);
+      el.textContent=val;
+      el.closest('.pd-sec').hidden=(skip||val==='—'||!val);
+    }
+    set('projGoal',p.goal);set('projVision',p.vision);set('projRole',p.role);
+    set('projScene',p.scene);set('projStory',p.story);set('projAi',p.ai);
+    set('projFinal',p.final);set('projSum',p.sum);
+    var hasVideo=!!p.video;
+    vid.style.display=hasVideo?'':'none';poster.style.display=hasVideo?'none':'';
+    if(hasVideo){vid.src=p.video;vid.poster=p.poster;}else{poster.src=p.poster||'';}
+    lb.classList.add('open');document.body.style.overflow='hidden';
+    if(hasVideo){vid.play().catch(function(){});}
+    return true;
+  }
+  document.addEventListener('click',function(e){
+    var card=e.target.closest('#videoGrid .v-card');
+    if(card && card.dataset.file){
+      if(openProject(card.dataset.title))return;
+    }
+    var m=e.target.closest('.feat-media.video');
+    if(m && m.dataset.file){
+      if(openProject(m.dataset.title))return;
+    }
+  });
+  function closeProject(){lb.classList.remove('open');vid.pause();vid.removeAttribute('src');vid.load();document.body.style.overflow='';}
+  document.getElementById('projClose').addEventListener('click',closeProject);
+  lb.addEventListener('click',function(e){if(e.target===lb)closeProject();});
+  document.addEventListener('keydown',function(e){
+    if(lb.classList.contains('open')&&e.key==='Escape')closeProject();
+  });
+  window.__openProject=openProject;
+})();
 /* ===== 剧本 ===== */
 .script-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .s-card{
@@ -415,6 +572,38 @@ footer p b{color:var(--ink)}
   .f30-item:nth-child(odd){border-right:1px solid var(--line)}
   .f30-arr{display:none}
 }
+
+/* ===== v4.4 优化 ===== */
+.nav-cta{border:1px solid var(--cinnabar);color:var(--cinnabar)!important;padding:7px 18px;letter-spacing:2px;transition:all .3s}
+.nav-cta:hover{background:var(--cinnabar);color:var(--white)!important}
+.nav-cta::after{display:none!important}
+.asset-sub{display:flex;align-items:baseline;gap:14px;margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--ink)}
+.asset-sub small{font-size:11px;color:var(--ink-2);font-weight:400;letter-spacing:1px}
+.craft-tools{margin-top:22px;font-size:12px;color:var(--ink-2);letter-spacing:1px;text-align:center;border-top:1px solid var(--line);padding-top:16px}
+.pd-inner{display:grid;grid-template-columns:minmax(0,46%) 1fr;max-width:1180px;background:var(--paper);color:var(--ink)}
+.pd-media{position:relative;background:#141210;display:flex;align-items:center;justify-content:center;min-height:320px}
+.pd-media video{width:100%;max-height:82vh;display:block;background:#000}
+.pd-media img{max-width:100%;max-height:82vh;width:auto;height:auto;object-fit:contain}
+.pd-body{padding:36px 40px;max-height:86vh;overflow-y:auto;scrollbar-width:thin}
+.pd-tag{font-size:11px;color:var(--cinnabar);letter-spacing:3px}
+.pd-body h3{font-size:26px;font-weight:900;letter-spacing:2px;margin-top:8px}
+.pd-meta{margin-top:8px;font-size:12px;color:var(--ink-2);letter-spacing:1.5px}
+.pd-intro{margin-top:16px;font-size:13.5px;color:var(--ink-2);line-height:1.9;border-left:2px solid var(--cinnabar);padding-left:12px}
+.pd-sec{margin-top:20px}
+.pd-sec h4{font-size:12px;font-weight:700;letter-spacing:3px;color:var(--ink);display:flex;align-items:center;gap:10px}
+.pd-sec h4::after{content:"";flex:1;height:1px;background:var(--line)}
+.pd-sec p{font-size:13px;color:var(--ink-2);line-height:1.9;margin-top:8px}
+.pd-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pd-chips span{border:1px solid var(--cinnabar);color:var(--cinnabar);font-size:11.5px;padding:4px 12px;letter-spacing:1.5px}
+.pd-sum{border-top:1px solid var(--line);padding-top:18px}
+.pd-sum p{color:var(--ink);font-size:13.5px}
+.pd-sec[hidden]{display:none}
+@media(max-width:900px){
+  .pd-inner{grid-template-columns:1fr}
+  .pd-media{min-height:200px}
+  .pd-body{max-height:none;padding:26px 22px;overflow:visible}
+  #projLightbox .lb-inner{overflow-y:auto}
+}
 </style>
 </head>
 <body>
@@ -434,7 +623,7 @@ footer p b{color:var(--ink)}
       <li><a href="#script">剧本</a></li>
       <li><a href="#asset">角色资产</a></li>
       <li><a href="#about">关于我</a></li>
-      <li><a href="#contact">联系</a></li>
+      <li><a class="nav-cta" href="#contact">联系我</a></li>
     </ul>
   </div>
 </nav>
@@ -621,17 +810,19 @@ footer p b{color:var(--ink)}
       <div class="sec-line"></div>
     </div>
     <div class="flow30">
-      <div class="f30-item"><div class="f30-no">01</div><div class="f30-t">美术学背景</div></div>
+      <div class="f30-item"><div class="f30-no">01</div><div class="f30-t">美术学</div></div>
       <div class="f30-arr">→</div>
-      <div class="f30-item"><div class="f30-no">02</div><div class="f30-t">插画 / 漫画 / 商业视觉</div></div>
+      <div class="f30-item"><div class="f30-no">02</div><div class="f30-t">插画 / 漫画</div></div>
       <div class="f30-arr">→</div>
-      <div class="f30-item"><div class="f30-no">03</div><div class="f30-t">角色 &amp; 场景设计</div></div>
+      <div class="f30-item"><div class="f30-no">03</div><div class="f30-t">商业视觉</div></div>
       <div class="f30-arr">→</div>
-      <div class="f30-item"><div class="f30-no">04</div><div class="f30-t">剧本 &amp; 分镜</div></div>
+      <div class="f30-item"><div class="f30-no">04</div><div class="f30-t">角色 &amp; 场景设计</div></div>
       <div class="f30-arr">→</div>
-      <div class="f30-item"><div class="f30-no">05</div><div class="f30-t">AI 视频生成</div></div>
+      <div class="f30-item"><div class="f30-no">05</div><div class="f30-t">剧本 &amp; 分镜</div></div>
       <div class="f30-arr">→</div>
-      <div class="f30-item"><div class="f30-no">06</div><div class="f30-t">完整短片</div></div>
+      <div class="f30-item"><div class="f30-no">06</div><div class="f30-t">AI 视觉生成</div></div>
+      <div class="f30-arr">→</div>
+      <div class="f30-item"><div class="f30-no">07</div><div class="f30-t">AI 视频成片</div></div>
     </div>
     <div class="f30-memo">我的优势不是某一个 AI 工具，而是能够把<b>视觉能力贯穿到完整内容生产流程</b>。</div>
   </div>
@@ -651,7 +842,7 @@ footer p b{color:var(--ink)}
         <p>我从传统美术进入数字视觉，又从插画与漫画进入 AI 内容创作。</p>
         <p>我喜欢解决的不是“怎么生成一张好看的图”，而是一个视觉想法如何真正落地。从角色设定、场景设计，到剧本、分镜、AI 生成与后期成片，我能够参与并完成完整视觉制作流程。</p>
         <p>我的美术训练让我关注造型、构图、色彩与光影；AI 工具则让我能够快速把这些视觉判断转化成动态内容。我希望加入一个能够让我持续做视觉、持续积累专业能力的团队。</p>
-        <div class="about-seek">正在寻找：<b>AI 视觉 / 视觉设计 / 角色与场景 / AI 内容制作</b> 相关岗位。</div>
+        <div class="about-seek">正在寻找：<b>AI 视觉 / 视觉设计 / 角色与场景 / AI 短剧视觉 / AI 内容制作</b> 相关岗位。</div>
       </div>
     </div>
   </div>
@@ -663,7 +854,7 @@ footer p b{color:var(--ink)}
     <div class="role-box">
       <div class="role-eyebrow">JOB FOCUS · 岗位视角</div>
       <h2>选择你关心的岗位方向</h2>
-      <div class="role-sub">HR 可按岗位快速定位对应作品与能力 — 也可切换「全能」查看完整创作版图</div>
+      <div class="role-sub">HR 可按岗位快速定位对应作品与能力 — 核心方向：AI 视觉创作 · 全流程制作</div>
       <div class="role-tabs" id="roleTabs">
         <button class="role-tab on" data-role="all">AI 视觉创作者<small>AI VISUAL</small></button>
         <button class="role-tab" data-role="illustrator">插画师 · 原画师<small>ILLUSTRATOR</small></button>
@@ -826,25 +1017,29 @@ footer p b{color:var(--ink)}
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="sec-num">CHARACTER DESIGN 柒</div>
-        <h2 class="sec-title">角色与场景资产<small>ASSETS</small></h2>
+        <div class="sec-num">VISUAL ASSET 柒</div>
+        <h2 class="sec-title">视觉资产开发<small>VISUAL ASSET DEVELOPMENT</small></h2>
       </div>
       <div class="sec-line"></div>
     </div>
-    <p class="sec-desc">AI 短剧制作中的角色三视图、服装设定与场景资产，保障跨镜头的一致性。</p>
-    <div class="asset-grid" id="assetGrid">
+    <p class="sec-desc">AI 短剧制作中的<b style="color:var(--ink)">角色一致性 · 服装设计 · 场景设计 · 镜头适配 · 资产管理</b>——先建立可复用的视觉资产，再推进镜头，保障成片质量。</p>
+    <div class="asset-sub"><span>角色资产 · CHARACTER</span><small>三视图 · 服装 · 人物一致性</small></div>
+    <div class="asset-grid" id="assetGridChar">
       <div class="a-item"><img src="assets/works/ai_char_zhunv.png" alt="女主三视图" loading="lazy"><div class="a-cap">女主 · 三视图</div></div>
       <div class="a-item"><img src="assets/works/ai_char_zhunv_changfu.png" alt="女主常服" loading="lazy"><div class="a-cap">女主 · 常服</div></div>
       <div class="a-item"><img src="assets/works/ai_char_jiangjun.png" alt="将军战袍" loading="lazy"><div class="a-cap">将军 · 战袍</div></div>
       <div class="a-item"><img src="assets/works/ai_char_shifu.png" alt="师傅华服" loading="lazy"><div class="a-cap">师傅 · 华服</div></div>
+      <div class="a-item"><img src="assets/works/ai_ov_male.jpg" alt="海外短剧男主" loading="lazy"><div class="a-cap">海外短剧 · 男主</div></div>
+      <div class="a-item"><img src="assets/works/ai_ov_female.jpg" alt="海外短剧女主" loading="lazy"><div class="a-cap">海外短剧 · 女主</div></div>
+      <div class="a-item"><img src="assets/works/ai_ov_1.jpg" alt="海外短剧人物资产" loading="lazy"><div class="a-cap">海外短剧 · 人物资产</div></div>
+    </div>
+    <div class="asset-sub" style="margin-top:26px"><span>场景资产 · SCENE</span><small>场景设计 · 氛围 · 镜头适配</small></div>
+    <div class="asset-grid" id="assetGridScene">
       <div class="a-item"><img src="assets/works/ai_scene_chaotang.png" alt="朝堂场景" loading="lazy"><div class="a-cap">场景 · 朝堂</div></div>
       <div class="a-item"><img src="assets/works/ai_scene_zhanchang.png" alt="战场场景" loading="lazy"><div class="a-cap">场景 · 战场</div></div>
       <div class="a-item"><img src="assets/works/ai_scene_yuhuayuan.png" alt="御花园场景" loading="lazy"><div class="a-cap">场景 · 御花园</div></div>
       <div class="a-item"><img src="assets/works/ai_scene_shenfu.png" alt="沈府场景" loading="lazy"><div class="a-cap">场景 · 沈府</div></div>
       <div class="a-item"><img src="assets/works/ai_scene_hundun.png" alt="馄饨摊场景" loading="lazy"><div class="a-cap">场景 · 馄饨摊</div></div>
-      <div class="a-item"><img src="assets/works/ai_ov_male.jpg" alt="海外短剧男主" loading="lazy"><div class="a-cap">海外短剧 · 男主</div></div>
-      <div class="a-item"><img src="assets/works/ai_ov_female.jpg" alt="海外短剧女主" loading="lazy"><div class="a-cap">海外短剧 · 女主</div></div>
-      <div class="a-item"><img src="assets/works/ai_ov_1.jpg" alt="海外短剧人物资产" loading="lazy"><div class="a-cap">海外短剧 · 人物资产</div></div>
     </div>
   </div>
 </section>
@@ -891,41 +1086,60 @@ footer p b{color:var(--ink)}
     <div class="craft-grid">
       <div class="craft">
         <div class="craft-num">01</div>
-        <h3>传统美术</h3>
+        <h3>视觉基础</h3>
         <ul>
-          <li>手绘插画 / 板绘</li>
-          <li>漫画分镜与叙事</li>
-          <li>色彩与光影训练</li>
+          <li>造型 / 构图</li>
+          <li>色彩 / 光影</li>
+          <li>插画</li>
         </ul>
       </div>
       <div class="craft">
         <div class="craft-num">02</div>
-        <h3>AI 生图</h3>
+        <h3>角色视觉</h3>
         <ul>
           <li>角色设计 / 三视图</li>
-          <li>场景概念与氛围图</li>
-          <li>电商视觉 / 主图详情</li>
+          <li>服装设计</li>
+          <li>人物资产</li>
         </ul>
       </div>
       <div class="craft">
         <div class="craft-num">03</div>
-        <h3>AI 视频</h3>
-          <ul>
-          <li>文生视频 / 图生视频</li>
-          <li>短剧成片生成</li>
-          <li>高光剪辑与混剪</li>
+        <h3>场景视觉</h3>
+        <ul>
+          <li>场景设计 / 氛围</li>
+          <li>空间 / 镜头构图</li>
+          <li>风格统一</li>
         </ul>
       </div>
       <div class="craft">
         <div class="craft-num">04</div>
-        <h3>剧本与制作</h3>
+        <h3>叙事视觉</h3>
         <ul>
-          <li>短剧剧本 / 分镜脚本</li>
-          <li>配音与音效设计</li>
-          <li>全流程项目管理</li>
+          <li>剧本 / 分镜</li>
+          <li>漫画叙事</li>
+          <li>镜头设计</li>
+        </ul>
+      </div>
+      <div class="craft">
+        <div class="craft-num">05</div>
+        <h3>AI 视觉</h3>
+        <ul>
+          <li>AI 生图</li>
+          <li>图生视频 / 文生视频</li>
+          <li>视觉迭代</li>
+        </ul>
+      </div>
+      <div class="craft">
+        <div class="craft-num">06</div>
+        <h3>成片制作</h3>
+        <ul>
+          <li>剪辑 / 节奏</li>
+          <li>配音 / 音效</li>
+          <li>完整项目制作</li>
         </ul>
       </div>
     </div>
+    <div class="craft-tools">常用创作工具（按项目需要组合）：Photoshop · Midjourney · 即梦 · 豆包 · 剪映</div>
   </div>
 </section>
 
@@ -975,7 +1189,7 @@ footer p b{color:var(--ink)}
         <div class="c-line"><b>邮箱</b><a href="mailto:166098943@qq.com">166098943@qq.com</a></div>
         <div class="c-line"><b>电话</b><a href="tel:17828831105">178-2883-1105</a></div>
       </div>
-      <div class="ready">插画 · 漫画 · AI 短剧 · 剧本 · 视觉设计 — 全能型视觉创作者</div>
+      <div class="ready">美术底子 × AI 视觉 × 角色 / 场景 × 叙事 × 成片</div>
     </div>
   </div>
 </section>
@@ -985,6 +1199,32 @@ footer p b{color:var(--ink)}
   <p><b>刘彦</b> · VISUAL CREATOR · 2026</p>
 </footer>
 
+
+<!-- ===== 项目详情 ===== -->
+<div class="lightbox" id="projLightbox">
+  <div class="lb-inner pd-inner">
+    <button class="lb-close" id="projClose">×</button>
+    <div class="pd-media">
+      <video id="projVideo" controls playsinline preload="metadata" style="display:none"></video>
+      <img id="projPoster" src="" alt="" style="display:none">
+    </div>
+    <div class="pd-body">
+      <div class="pd-tag" id="projTag"></div>
+      <h3 id="projTitle"></h3>
+      <div class="pd-meta" id="projMeta"></div>
+      <p class="pd-intro" id="projIntro"></p>
+      <div class="pd-sec"><h4>我的职责</h4><div class="pd-chips" id="projDuty"></div></div>
+      <div class="pd-sec"><h4>项目目标</h4><p id="projGoal"></p></div>
+      <div class="pd-sec"><h4>视觉方向</h4><p id="projVision"></p></div>
+      <div class="pd-sec"><h4>角色设计</h4><p id="projRole"></p></div>
+      <div class="pd-sec"><h4>场景设计</h4><p id="projScene"></p></div>
+      <div class="pd-sec"><h4>分镜设计</h4><p id="projStory"></p></div>
+      <div class="pd-sec"><h4>AI 生成</h4><p id="projAi"></p></div>
+      <div class="pd-sec"><h4>最终成片</h4><p id="projFinal"></p></div>
+      <div class="pd-sec pd-sum"><h4>项目总结</h4><p id="projSum"></p></div>
+    </div>
+  </div>
+</div>
 <!-- ===== 页面灯箱（画集/漫画共用） ===== -->
 <div class="lightbox" id="bookLightbox">
   <div class="lb-inner" style="max-width:860px">
@@ -1067,11 +1307,7 @@ footer p b{color:var(--ink)}
   });
   document.addEventListener('click',function(e){
     var card=e.target.closest('.v-card');
-    if(card && card.dataset.file) openVideo(card.dataset.file,card.dataset.title);
-  });
-  document.addEventListener('click',function(e){
-    var m=e.target.closest('.feat-media.video');
-    if(m && m.dataset.file) openVideo(m.dataset.file,m.dataset.title);
+    if(card && card.dataset.file && !card.closest('#videoGrid')) openVideo(card.dataset.file,card.dataset.title);
   });
   function closeVideo(){lb.classList.remove('open');player.pause();player.removeAttribute('src');player.load();document.body.style.overflow='';}
   document.getElementById('videoClose').addEventListener('click',closeVideo);
